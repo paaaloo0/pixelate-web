@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Modelo de Cajas II</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Modelo de Cajas II</h1>
+			<blockquote><p>Todo es una caja. Y además, todos los elementos contienen componentes que podemos modificar con CSS.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Margin</h2>
+				<p>La propiedad <span class="highlight">margin</span> nos permite agregar un espacio imaginario por fuera de nuestra caja. Esto nos permite separar elementos entre si y generar un layout más ordenado.</p>
+				<p>Al igual que el "padding", podemos asignar esta propiedad un lado a la vez o a todos lados al mismo tiempo de la siguiente manera:</p>
+				<ul>
+					<li>margin-top</li>
+					<li>margin-right</li>
+					<li>margin-bottom</li>
+					<li>margin-left</li>
+					<li>margin</li>
+				</ul>
+				<h3>Lados individuales</h3>
+				<code>
+					<span>div {margin-top: 20px;}</span>
+					<span>div {margin-right: 40px;}</span>
+					<span>div {margin-bottom: 10px;}</span>
+					<span>div {margin-left: 100px;}</span>
+				</code>
+				<p>Este código aplicado a nuestra caja se vería así:</p>
+				<code>
+					<div class="caja-overflow margin-lados">
+						<p>Cupcake ipsum dolor sit amet caramels. Dragée I love soufflé applicake chocolate cake pastry applicake. I love cheesecake chocolate bar fruitcake.</p>
+					</div>
+					<div class="clear"></div>
+				</code>
+				<h3>Lados al mismo tiempo</h3>
+				<code>
+					<span>div {padding: 20px 40px 10px 100px;}
+				</code>
+				<p>Recuerda que comenzamos por arriba y seguimos según las manecillas del reloj con el lado derecho, abajo y finalmente izquierdo.</p>
+				<p>Este código aplicado a nuestra caja se vería así:</p>
+				<code>
+					<div class="caja-overflow margin-lados">
+						<p>Cupcake ipsum dolor sit amet caramels. Dragée I love soufflé applicake chocolate cake pastry applicake. I love cheesecake chocolate bar fruitcake.</p>
+					</div>
+					<div class="clear"></div>
+				</code>
+				<p>Los atajos vistos para el padding, se aplican para el margin:</p>
+				<code>
+					<span>div {margin: 20px;}</span>
+					<span>div {margin: 20px 10px;}</span>
+					<span>div {margin: 20px 50px 10px;}</span>
+				</code>
+				<p>Y los valores corresponden a:</p>
+				<dl>
+					<dt>Cuando hay un valor</dt>
+					<dd>El valor corresponderá a los cuatro lados por igual.</dd>
+					<dt>Cuando hay dos valores</dt>
+					<dd>El primer valor corresponde a <em>top</em> y <em>bottom</em>. El segundo valor a <em>right</em> y <em>left</em></dd>
+					<dt>Cuando hay tres valores</dt>
+					<dd>El primer valor corresponde a <em>top</em>. El segundo valor a <em>left</em> y <em>right</em>. El tercero corresponde a <em>bottom</em></dd>
+				</dl>
+				<h3>Características adicionales de la propiedad margin</h3>
+				<p>El atributo <span class="highlight">margin</span> acepta el valor "auto", el cual permite al navegador calcular el espacio para llenar el área disponible de la caja contenedora.</p>
+				<p>Este valor es especialmente útil para centrar elementos en bloque dentro de un contenedor.</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<div class="caja-margin-auto">
+						<p>Cupcake ipsum dolor sit amet caramels. Dragée I love soufflé applicake chocolate cake pastry applicake. I love cheesecake chocolate bar fruitcake.</p>
+					</div>
+					<div class="clear"></div>
+				</code>
+				<p>El cuadro del ejemplo se ubica en el centro horizontal de su contenedor, para esto, aplicamos margin de la siguiente manera:</p>
+				<code>
+					<span>div {margin:0 auto;}</span>
+				</code>
+				<p>Como vimos anteriormente, dos valores indican que el margen superior e inferior corresponden a 0(cero) y los márgenes izquierdo y derecho deben calcularse automáticamente.</p>
+				<h5>Importante</h5>
+				<ul>
+					<li>Esta técnica sólo puede aplicarse a <strong>elementos en bloque</strong>.</li>
+					<li>El elemento contenedor <strong>debe</strong> tener definido un valor <strong>width</strong></li>
+				</ul>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Comportamiento del margen - Colapsar</h2>
+				<p>Un comportamiento significativo de la regla <span class="highlight">margin</span> es lo que se llama "colapso".</p>
+				<p>Este comportamiento significa que cuando existen dos elementos adyacentes, sus márgenes verticales no se acumulan, sino que el mayor de ellos se mantiene y se utiliza.</p>
+				<p>Para más información respecto a este comportamiento, puedes visitar los siguientes artículos:</p>
+				<ul>
+					<li><a href="http://www.complexspiral.com/publications/uncollapsing-margins/" target="_blank">Uncollapsing-margins</a></li>
+					<li><a href="http://www.researchkitchen.de/blog/archives/css-autoheight-and-margincollapsing.php" target="_blank">CSS - Auto-height and margin-collapsing</a></li>
+				</ul>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Márgenes en elementos en linea</h2>
+				<p>Algunas características:</p>
+				<ul>
+					<li>Al aplicar <span class="highlight">margin</span> a un elemento en linea como el texto, sólo los valores left y right se aplicarán, los márgenes arriba y abajo serán ignorados por el navegador.</li>
+					<li>Las etiquetas &lt;img /&gt; también son elementos en linea, sin embargo, el valor de margen si se aplicará a todos los lados.</li>
+				</ul>
+			</div><!--.article-->
+						
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+	
+	<div id="paginacion">
+		<ul>
+			<li><a href="index.html">1</a></li>
+			<li><a href="pag2.html">2</a></li>
+			<li><a href="pag3.html">3</a></li>
+			<li><a href="pag4.html" class="actual">4</a></li>
+			<li><a href="pag5.html">5</a></li>					
+		</ul>
+	</div>
+
+</body>
+</html>

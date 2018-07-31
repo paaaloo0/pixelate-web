@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>HTML - Tablas</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Tablas en HTML</h1>
+			<blockquote><p>Las tablas nos permiten organizar o tabular datos en filas y columnas.</p></blockquote>
+			<p>Con tablas podemos crear calendarios, estadísticas y otros tipos de información</p>
+			<p>Las tablas organizan información a través de <strong>filas</strong> y <strong>celdas</strong>. Cada celda puede contener cualquier tipo de información como texto, imágenes, links o incluso otras tablas.</p>
+			<h3>Importante</h3>
+			<p>Antes de las hojas de estilo CSS, las tablas se utilizaban para definir el layout de un sitio web, es decir, para disponer elementos en columnas o alinear componentes.<strong>Actualmente esta técnica no es recomendada</strong>.</p>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+				<h2>Estructura básica de una tabla</h2>
+				<p>El ejemplo a continuación muestra una tabla que consta de tres columnas y tres filas de datos:</p>
+				<code>
+					<table>
+						<tr>
+							<th>Fruta</th>
+							<th>Calorías</th>
+							<th>Proteínas</th>
+						</tr>
+						<tr>
+							<td>Naranja</td>
+							<td>53g</td>
+							<td>1g</td>
+						</tr>
+						<tr>
+							<td>Manzana</td>
+							<td>45g</td>
+							<td>0.2g</td>
+						</tr>
+					</table>
+				</code>
+				<h3>Descripción</h3>
+				<p>Si miramos la table pensando en HTML podremos ver que cada existen tres filas que contienen:</p>
+				<ul>
+					<li>Una fila con los títulos para cada columna.</li>
+					<li>La segunda y tercera columna que contienen datos almacenados en "celdas".</li>
+				</ul>
+				<p>Esto se traduce como código así:</p>
+				
+				<code>
+					<span>&lt;table&gt;</span>
+					<span class="indentx1">&lt;tr&gt;</span>
+						<span class="indentx2">&lt;th&gt;Fruta&lt;/th&gt;</span>
+						<span class="indentx2">&lt;th&gt;Calorías&lt;/th&gt;</span>
+						<span class="indentx2">&lt;th&gt;Proteínas&lt;/th&gt;</span>
+					<span class="indentx1">&lt;/tr&gt;</span>
+					<span class="indentx1">&lt;tr&gt;</span>
+						<span class="indentx2">&lt;td&gt;Naranja&lt;/td&gt;</span>
+						<span class="indentx2">&lt;td&gt;53g&lt;/td&gt;</span>
+						<span class="indentx2">&lt;td&gt;1g&lt;/td&gt;</span>
+					<span class="indentx1">&lt;/tr&gt;</span>
+					<span class="indentx1">&lt;tr&gt;</span>
+						<span class="indentx2">&lt;td&gt;Manzana&lt;/td&gt;</span>
+						<span class="indentx2">&lt;td&gt;45g&lt;/td&gt;</span>
+						<span class="indentx2">&lt;td&gt;0.2g&lt;/td&gt;</span>
+					<span class="indentx1">&lt;/tr&gt;</span>
+					<span>&lt;/table&gt;</span>
+				</code>
+				
+				<h3>Etiquetas HTML para definir partes de una tabla</h3>
+				<p>A diferencia de una tabla normal, las tablas en HTML no definen literalmente una columna. Éstas están determinadas por el número de "celdas" en cada fila. Si nuestra tabla contiene 3 columnas, debemos asegurarnos de incluir <strong>3 celdas en cada fila</strong>.</p>
+				<dl>
+					<dt>&lt;table&gt;</dt>
+					<dd>La etiqueta "table" se utiliza para identificar el comienzo y fin de una tabla. La tabla debe incluir directamente las filas que la compondrán.</dd>
+					<dt>&lt;tr&gt;</dt>
+					<dd>La etiqueta "tr" define una fila dentro de la tabla. Éstas a su vez sólo pueden contener celdas (&lt;th&gt; o &lt;td&gt;).</dd>
+					<dt>&lt;th&gt; y &lt;td&gt;</dt>
+					<dd>La etiqueta "th" define un tipo especial de celda y nos ayuda a definir una <strong>cabecera o título</strong> de la tabla. La etiqueta "td" representa una celda del la tabla y dentro de ella podemos agregar cualquier tipo de contenido.</dd>
+				</dl>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Más información acerca de las tablas</h2>
+				<p>Existe una serie de etiquetas y atributos más avanzados que nos ayudan a mejorar nuestras tablas, puedes ver ejemplos y tutoriales de esto aquí:</p>
+				<a href="http://www.w3schools.com/html/html_tables.asp">Tablas en HTML</a>
+			</div>
+									
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+
+</body>
+</html>

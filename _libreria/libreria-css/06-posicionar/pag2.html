@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Posicionar Elementos</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Posicionar elementos</h1>
+			<blockquote><p>Para crear interfases o layouts de sitios web podemos mover y disponer elementos a través de CSS.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Propiedad Float</h2>
+				<p>La propiedad <span class="highlight">float</span> saca un elemento del flujo normal de un sitio y lo ubica <strong>lo más a la derecha o a la izquierda que sea posible dentro de su contenedor</strong>. Este comportamiento permite que el resto del contenido <em>envuelva</em> el elemento flotado.</p>
+				<h3>Valores</h3>
+				<p>La propiedad <span class="highlight">float</span> puede tomar las siguientes propiedades:</p>
+				<dl>
+					<dt>left</dt>
+					<dd>El elemento flotará lo más a la izquierda posible dentro de su contenedor.</dd>
+					<dt>right</dt>
+					<dd>El elemento flotará lo más a la derecha posible dentro de su contenedor.</dd>
+					<dt>none</dt>
+					<dd>Elimina el float del elemento y lo devuelve al flujo natural.</dd>
+				</dl>
+				<h4>Ejemplo</h4>
+				<p>El código muestra cómo una imagen se comporta al ser ingresada dentro de un párrafo:</p>
+				<code>
+					&lt;p&gt;<br />
+					&lt;img src="img/float.jpg" alt="thumbnail" /&gt;<br />
+					Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.<br />&lt;/p&gt;
+				</code>
+				<p>Este código se visualizaría así:</p>
+				<code>
+					<p><img src="img/float.jpg" alt="thumbnail" />Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+				</code>
+				<p>Tanto la imagen como el texto son elementos en linea y su comportamiento natural es ubicarse uno junto al otro</p>
+				<p>Modificaremos la propiedad <span class="highlight">float</span> del elemento así:</p>
+				<code>
+					<span>img {float: left;}</span>
+				</code>
+				<code>
+					<h5>float: left</h5>
+					<p><img src="img/float.jpg" class="float-left" alt="thumbnail" />Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops. Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+				</code>
+				<code>
+					<h5>float: right</h5>
+					<p><img src="img/float.jpg" class="float-right" alt="thumbnail" />Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops. Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+				</code>
+				<h3>Descripción</h3>
+				<p>La imagen al ser flotada a la izquierda o derecha saldrá del flujo, se ubicará los más a la izquierda o derecha posible <strong>dentro de su contenedor</strong>.</p>
+				<p>El texto que la acompaña es influenciado por la imagen aunque esta esté flotada y la intentando seguir el flujo natural.</p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Ejemplos</h2>
+				<h3>Flotar un elemento texto en linea</h3>
+				<p>A través de la etiqueta span, marcaremos una parte del texto para flotarlo.</p>
+				<code>
+					&lt;p&gt;<br />&lt;span class="bajada"&gt;Cupcake ipsum dolor.&lt;/span&gt; Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops. Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.<br />&lt;/p&gt;
+				</code>
+				<p>La class "bajada" la definimos así:</p>
+				<code>
+					<span>.bajada{</span>
+						<span class="indentx1">width:100px;</span>
+						<span class="indentx1">float: right;</span>
+						<span class="indentx1">background-color:#fad88e;</span>
+						<span class="indentx1">padding:4px;</span>
+						<span class="indentx1">margin:4px;</span>
+						<span class="indentx1">font-size:1.5em;</span>
+					<span>}
+				</code>
+				<p>Y el resultado es:</p>
+				<code>
+					<p><span class="float-right bajada">Cupcake ipsum dolor.</span> Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops. Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+				</code>
+				<h4>Descripción:</h4>
+				<p>Los elementos de texto en linea, al ser flotados <strong>se comportan como elementos en bloque</strong>.</p>
+				<p>Al comportarse como elemento en bloque, podemos aplicar la propiedad margin a todos sus lados para separarlo del contenido.</p>
+				<p>Al ser un elemento en bloque, éste puede expandirse a todo el ancho de su contenedor. Por esta razón, es útil definir un ancho específico en la regla.</p>
+				
+				<h3>Flotar un elemento en bloque</h3>
+				<p>Flotaremos uno de tres párrafos.</p>
+				<code>
+					&lt;p&gt;Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops. Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake.&lt;/p&gt;<br />
+					&lt;p class="flotar-izquierda"&gt;Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops. Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake.&lt;/p&gt;<br />
+					&lt;p&gt;Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops. Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake.&lt;/p&gt;<br />
+				</code>
+				<p>La class "flotar-izquierda" la definimos así:</p>
+				<code>
+					<span>.flotar-izquierda{</span>
+						<span class="indentx1">float:left;</span>
+						<span class="indentx1">width:100px;</span>
+						<span class="indentx1">background-color:#925505;</span>
+						<span class="indentx1">color:#fff;</span>
+					<span>}
+				</code>
+				<p>Y el resultado es:</p>
+				<code class="parrafo-float">
+					<p>Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops. Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake.</p>
+					<p class="flotar-izquierda">Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake.</p>
+					<p>Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops. Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake.</p>
+					<div class="clear"></div>
+				</code>
+				<h4>Descripción:</h4>
+				<p>El párrafo se mueve hacia la izquierda.</p>
+				<p>Cuando flotamos un elemento en bloque, su propiedad <em>width</em> toma el valor <em>auto</em>, por lo tanto se extenderá a todo el ancho de su contenedor. Entonces, debemos especificar un ancho</p>
+				<p>Los elementos en bloque siempre flotarán en relación a su posición original. Esto significa que en el eje horizontal, el elemento se moverá a la izquierda o derecha según el valor de la propiedad float. En el eje vertical se mantendrá siempre debajo del elemento que precede.</p>
+			</div><!--.article-->						
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+	
+	<div id="paginacion">
+		<p>Continúa a la siguiente página</p>
+		<ul>
+			<li><a href="#">1</a></li>
+			<li><a href="pag2.html" class="actual">2</a></li>
+			<li><a href="pag3.html">3</a></li>
+			<li><a href="pag4.html">4</a></li>				
+		</ul>
+	</div>
+
+</body>
+</html>

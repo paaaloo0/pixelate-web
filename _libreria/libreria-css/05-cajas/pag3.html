@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Modelo de Cajas II</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Modelo de Cajas II</h1>
+			<blockquote><p>Todo es una caja. Y además, todos los elementos contienen componentes que podemos modificar con CSS.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Bordes</h2>
+				<p>La propiedad <span class="highlight">border</span> se utiliza para dibujar una linea al rededor de una caja y su correspondiente padding (si existiera).</p>
+				<p>Funciona de manera similar a "background" en el sentido que pueden especificarse propiedades específicas o utilizar un atajo para definirlas todas a la vez.</p>
+				<p>para definir un borde utilizamos las siguientes propiedades:</p>
+				<ul>
+					<li>border-style</li>
+					<li>border-width</li>
+					<li>border-color</li>
+				</ul>
+			</div><!--.article-->
+			<div class="article">
+				<h2>border-style</h2>
+				<p><strong>Esta propiedad es la más importante, pues si ésta no existe el borde no se mostrará.</strong></p>
+				<p>El estilo de borde puede aplicarse a cada lado independientemente o a todos juntos a través de las siguientes sintáxis:</p>
+				<ul>
+					<li>border-top-style</li>
+					<li>border-right-style</li>
+					<li>border-bottom-style</li>
+					<li>border-left-style</li>
+					<li>border-style</li>
+				</ul>
+				<h4>Importante</h4>
+				<p>Si no se incluye un color, por defecto el navegador creará una linea de negra.</p>
+				<h3>Valores</h3>
+				<p>La propiedad <span class="highlight">border-style</span> puede tomar los siguientes valores.</p>
+				<code>
+					<ul>
+						<li><span>div {border-style: none};</span></li>
+						<li><span>div {border-style: dotted};</span></li>
+						<li><span>div {border-style: dashed};</span></li>
+						<li><span>div {border-style: solid};</span></li>
+						<li><span>div {border-style: double};</span></li>
+						<li><span>div {border-style: groove};</span></li>
+						<li><span>div {border-style: ridge};</span></li>
+						<li><span>div {border-style: inset};</span></li>
+						<li><span>div {border-style: outset};</span></li>
+					</ul>
+				</code>
+				<h4>Ejemplos</h4>
+				<code>
+					<div class="caja-border style-none">none</div>
+					<div class="caja-border style-dotted">dotted</div>
+					<div class="caja-border style-dashed">dashed</div>
+					<div class="caja-border style-solid">solid</div>
+					<div class="caja-border style-double">double</div>
+					<div class="caja-border style-groove">groove</div>
+					<div class="caja-border style-ridge">ridge</div>
+					<div class="caja-border style-inset">inset</div>
+					<div class="caja-border style-outset">outset</div>
+					<div class="clear"></div>
+				</code>
+				<h3>Importante</h3>
+				<p>Puedes definir estilos individuales para cada lado de manera similar a como lo hicimos con la propiedad padding. Es decir, primero arriba, derecha, abajo e izquierda (recuerda separar cada uno con un espacio).</p>
+				<code>
+					<span>div {border-style: dotted solid dashed ridge}</span>
+				</code>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>border-width</h2>
+				<p>El <span class="highlight">border-width</span> nos permite especificar el grosor de la linea. Tal como en el border-style podemos definir todos los lados de una vez o cada uno individualmente.</p>
+				<p>La propiedad puede tomar los siguientes valores:</p>
+				<code>
+					<ul>
+						<li><span>Unidad de medida:</span> En pixeles.</li>
+						<li><span>Keyword:</span> Puede ser <em>thin</em>, <em>medium</em> o <em>thick</em></li>
+					</ul>
+				</code>
+				<h3>Ejemplo</h3>
+				<code>
+					<span>div {border-width: 5px;}</span>
+					<span>div {border-width: medium}</span>
+					<span>div {border-width: 10px thin medium thick;} (Un valor distinto a cada lado)</span>
+				</code>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>border-color</h2>
+				<p>Añadir color es tan simple como asignar a la propiedad <span class="highlight">border-color</span> un valor hexadecimal.</p>
+				<p>Podemos aplicar distintos colores a cada lado o un color para todos.</p>
+				<h3>Ejemplo</h3>
+				<code>
+					<span>div {border-color: #00ff00;}</span>
+					<span>div {border-color: #00ff00 red;} arriba y abajo verde y a los lados rojo.</span>
+					<span>div {border-left-color: #00ff00;} sólo el borde izquierdo verde.</span>
+				</code>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Abreviación</h2>
+				<p>Podemos utilizar una forma abreviada para definir el borde o bordes de una caja.</p>
+				<h3>Importante</h3>
+				<p>Podemos aplicar los tres valores que definen el borde <strong>en cualquier orden</strong>:</p>
+				<code>
+					<span>p {border: border-style border-width border-color}</span>
+				</code>
+				<h3>Ejemplo</h3>
+				<code>
+					<span>div {border-left: solid 10px red;} Borde izquierdo solamente</span>
+					<span>div {border-bottom: solid black 2px;} Solo abajo.</span>
+					<span>div {border: red groove 5px} Los cuatro bordes iguales.</span>
+				</code>
+			</div><!--.article-->
+						
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+	
+	<div id="paginacion">
+		<ul>
+			<li><a href="index.html">1</a></li>
+			<li><a href="pag2.html">2</a></li>
+			<li><a href="pag3.html" class="actual">3</a></li>
+			<li><a href="pag4.html">4</a></li>
+			<li><a href="pag5.html">5</a></li>					
+		</ul>
+	</div>
+
+</body>
+</html>

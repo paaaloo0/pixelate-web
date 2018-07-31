@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Modelo de Cajas II</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Modelo de Cajas II</h1>
+			<blockquote><p>Todo es una caja. Y además, todos los elementos contienen componentes que podemos modificar con CSS.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Display</h2>
+				<p>En este punto ya estamos familiarizados con los conceptos de elemento <strong>en bloque</strong> y <strong>en linea</strong>. CSS nos da la opción de modificar el estado o tipo de elemento a través de la propiedad <span class="highlight">display</span>.</p>
+				<p>Con ayuda de esta propiedad podemos convertir un elemento en linea a uno en bloque o viceversa (entre otros).</p>
+				<p>Entre los valores que esta propiedad acepta podemos mencionar cuatro:</p>
+				<ul>
+					<li>block</li>
+					<li>inline</li>
+					<li>inline-block</li>
+					<li>none</li>
+				</ul>
+				<h3>Descripción</h3>
+				<dl>
+					<dt>block</dt>
+					<dd>El elemento se despliega en bloque, como tal se muestra en su propia linea y a todo el ancho de su contenedor.</dd>
+					<dt>inline</dt>
+					<dd>El elemento se muestra en la misma linea que sus elementos adyacentes en linea y no tiene saltos de linea antes o después.</dd>
+					<dt>inline-block</dt>
+					<dd>El elemento se comporta como elemento en bloque, excepto por su posición, esta se mantiene en la misma linea que sus alementos adyacentes.</dd>
+					<dt>none</dt>
+					<dd>El elemento no se despliega para nada. Recuerda que anteriormente mencionamos que con la propiedad "visibility" podíamos ocultar un elemento, sin embargo este quedaba en el flujo del documento y su espacio se mantenía. Para ocultar totalmente el elemento podemos usar "display: none"</dd>
+				</dl>
+				<h4>Más información</h4>
+				<ul>
+					<li><a href="http://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">Propiedad display</a></li>
+				</ul>
+								
+			</div><!--.article-->						
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+	
+	<div id="paginacion">
+		<ul>
+			<li><a href="index.html">1</a></li>
+			<li><a href="pag2.html">2</a></li>
+			<li><a href="pag3.html">3</a></li>
+			<li><a href="pag4.html">4</a></li>
+			<li><a href="pag5.html" class="actual">5</a></li>					
+		</ul>
+	</div>
+
+</body>
+</html>

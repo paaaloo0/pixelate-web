@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title> HTML - Modelo de Cajas</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Modelo de cajas</h1>
+			<blockquote><p>Todo es una caja</p></blockquote>
+			<p>El principio del modelo de cajas es que todos los elementos creados a trav&eacute;s de HTML est&aacute;n contenidos dentro de una caja imaginaria.</p>
+			<p>Adicionalmente, HTML define dos formas en que los elementos se despliegan en un sitio web. Estos son elementos "en bloque" y elementos "en linea".</p>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Las cajas</h2>
+				<p>Todos los elementos est&aacute;n contenidos dentro de una caja imaginaria</p>
+				<h4>Ejemplo</h4>
+				<p>Mira los siguientes elementos, a cada uno se le aplic&oacute; un borde para definir su caja contenedora</p>
+				
+				<div id="ejemplo-cajas">
+					<h1>Modelo de cajas</h1>
+					<p>Carrot cake donut carrot cake candy chupa chups. Cotton candy cake cake bonbon wypas gummi bears gummi bears bonbon sugar plum. Pudding dessert caramels.</p>
+					<p>Carrot cake donut carrot cake candy chupa chups. Cotton <span>candy</span> cake cake bonbon wypas gummi bears gummi bears bonbon sugar plum. Pudding dessert caramels.</p>
+				</div>
+				
+				<p>Podr&aacute;s ver que todos los elementos, inclu&iacute;dos los textos, est&aacute;n contenidos dentro de una caja.</p>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Elementos en bloque</h2>
+				<p>Los elementos en bloque siempre se van a expandir a todo el ancho de su elemento contenedor, es por esto que siempre comenzar&aacute;n en una nueva linea cada vez que se integren al flujo de la p&aacute;gina.</p>
+				<h4>Ejemplos</h4>
+				<p>Algunos elementos en bloque son:</p>
+				<code>				
+					<ul>
+						<li>Cabeceras &lt;h1&gt; a &lt;h6&gt;</li>
+						<li>P&aacute;rrafos &lt;p&gt;</li>
+						<li>Listas &lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;, &lt;li&gt;</li>
+						<li>Divisiones &lt;div&gt;</li>
+					</ul>
+				</code>
+				<p>Algunos de &eacute;stos elementos se visualizan as&iacute;:</p>
+				<code id="bloque">
+					<h4>Cabecera</h4>
+					<p>P&aacute;rrafos</p>
+					<h2>Cabecera</h2>
+					<p>Parrafo</p>
+				</code>
+				<p>F&iacute;jate que cada elemento en bloque, en este caso &lt;p&gt; y &lt;h4&gt;, &lt;h2&gt; comienzan en su propia linea, comp&aacute;ralos con los elementos en linea que veremos a continuaci&oacute;n</p>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Elementos en linea</h2>
+				<p>Los elementos en linea no rompen el flujo normal de la p&aacute;gina. Adem&aacute;s su anchura no se extiende al ancho de su contenedor, solo a si mismo.</p>
+				<h4>Ejemplos</h4>
+				<p>Algunos elementos en linea son:</p>
+				<code>				
+					<ul>
+						<li>Anclas &lt;a&gt;</li>
+						<li>Im&aacute;genes &lt;img /&gt;</li>
+						<li>Spans &lt;span&gt;</li>
+						<li>Elementos de &eacute;nfasis como &lt;strong&gt; o &lt;em&gt;</li>
+					</ul>
+				</code>
+				<p>Algunos de &eacute;stos elementos se visualizan as&iacute;:</p>
+				<code>
+					&lt;p&gt;Cupcake ipsum dolor. Sit amet &lt;span class="fondo-verde"&gt;sesame snaps carrot cake icing liquorice&lt;/span&gt;. Chocolate cake donut lemon &lt;img src="icono.png" /&gt; drops fruitcake carrot cake soufflé macaroon. &lt;a href="#"&gt;Cookie&lt;/a&gt; chocolate cake jelly beans I love donut dragée marzipan pastry tiramisu.&lt;/p&gt;
+				</code>
+				<p>&Eacute;stos elementos se visualizan as&iacute;:</p>
+				<code>
+					<p>Cupcake ipsum dolor. Sit amet <span class="fondo-verde">sesame snaps carrot cake icing liquorice</span>. Chocolate cake donut lemon <img src="icono.png" /> drops fruitcake carrot cake soufflé macaroon. <a href="#">Cookie</a> chocolate cake jelly beans I love donut dragée marzipan pastry tiramisu.</p>
+				</code>
+				<p>F&iacute;jate que cada elemento en linea, en este caso el "span", "a" e "img" no rompen el flujo del sitio y contin&uacute;an en la misma linea que el elemento anterior y posterior.</p>
+				
+			</div><!--.article-->
+			
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>HTML - Formularios</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Formularios en HTML</h1>
+			<blockquote><p>Los formularios permiten a los usuarios enviar informaci&oacute;</p></blockquote>
+			<p>Trabajar con un formulario es un proceso de dos partes. La primera parte corresponde a recibir los datos por parte del usuario.</p>
+			<p>La segunda parte est&aacute; a cargo de un "script" que se encarga de procesar la informaci&oacute;n y responder a ella. (Esta &eacute;tapa est&aacute; fuera de los alcances de este curso.)</p>
+		</div>
+
+		<div id="content">
+
+			<div class="article">
+				<h2>Elemento &lt;form&gt;</h2>
+				<p>La etiqueta &lt;form&gt; corresponde al primer paso para crear un formulario en HTML</p>
+				<p>Su funci&oacute;n es servir de contenedor de todos los elementos de ingreso de informaci&oacute;n</p>
+				<p>Una etiqueta tradicional se construye as&iacute;</p>
+				<code>
+					<span>&lt;form action="scripts/script.php" method="POST" id="miFormulario"&gt;</span>
+					<span>&lt;/form&gt;</span>
+				</code>
+
+				<h3>Descripci&oacute;n</h3>
+				<p>La etiqueta &lt;form&gt; acepta una serie de atributos, en este ejemplo utilizamos tres b&aacute;sicos.</p>
+				<dl>
+					<dt>action</dt>
+					<dd>La etiqueta "action" corresponde a una URL. Esta URL es la encargada de procesar la informaci&oacute;n que se env&iacute;a a trav&eacute;s del formulario</dd>
+					<dt>method</dt>
+					<dd>Este atributo especifica la forma como la informaci&oacute;n se env&iacute;a al servidor.</dd>
+					<dt>id</dt>
+					<dd>El atributo id es com&uacute;n para todas las etiquetas y corresponde a un valor &uacute;nico para identificar el elemento.</dd>
+				</dl>
+
+			</div><!--.article-->
+
+			<div class="article">
+				<h2>Elementos &lt;fieldset&gt; y &lt;legend&gt;</h2>
+				<p>La etiqueta &lt;fieldset&gt; es un elemento que permite agrupar l&oacute;gicamente dentro de un formulario.</p>
+				<p>La etiqueta &lt;legend&gt; provee de un subt&iacute;tulo a un &lt;fieldset&gt;.</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<span>&lt;form action="scripts/script.php" method="POST" id="miFormulario"&gt;</span>
+						<span class="indentx1">&lt;fieldset&gt;</span>
+							<span class="indentx2">&lt;legend&gt;Datos Personales&lt;/legend&gt;</span>
+						<span class="indentx1">&lt;/fieldset&gt;</span>
+					<span>&lt;/form&gt;</span>
+				</code>
+				<p>El c&oacute;digo anterior se visualizar&iacute;a as&iacute;</p>
+				<code>
+					<form action="scripts/script.php" method="POST" id="miFormulario">
+						<fieldset>
+							<legend>Datos Personales</legend>
+							<p>Campos para ingresar mis datos personales</p>
+						</fieldset>
+					</form>
+				</code>
+
+			</div><!--.article-->
+
+			<div class="article">
+				<h2>Elemento &lt;label&gt;</h2>
+				<p>La etiqueta &lt;label&gt; se utiliza para asociar un texto descriptivo con su campo de ingreso de informaci&oacute;n asociado.</p>
+				<p>Esta etiqueta es especialmente &uacute;til para mejorar la accesibilidad de nuestros formularios.</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<span>&lt;form action="scripts/script.php" method="POST" id="miFormulario"&gt;</span>
+						<span class="indentx1">&lt;legend&gt;Datos Personales&lt;/legend&gt;</span>
+							<span class="indentx2">&lt;label for="tu-nombre"&gt;Nombre:&lt;/label&gt;</span>
+							<span class="indentx2">&lt;input type="text" id="tu-nombre" /&gt;</span>
+					<span>&lt;/form&gt;</code>
+				</code>
+				<p>El c&oacute;digo anterior se visualizar&iacute;a as&iacute;</p>
+				<code>
+					<form action="scripts/script.php" method="POST" id="miFormulario">
+						<fieldset>
+							<legend>Datos Personales</legend>
+							<label for="tu-nombre">Nombre:</label>
+							<input type="text" id="tu-nombre" />
+						</fieldset>
+					</form>
+				</code>
+				<h3>Importante</h3>
+				<p>El atributo &lt;label&gt; acepta un atributo "for", el valor de este atributo debe corresponder al valor del "id" del elemento al que est&aacute; asociado</p>
+				<p>En el ejemplo de arriba, el valor "tu-nombre" de la etiqueta &lt;label&gt; es igual al valor de la etiqueta "id" de la etiqueta &lt;input&gt;</p>
+
+			</div><!--.article-->
+
+			<div class="article">
+				<h2>Campos de texto simples</h2>
+				<p>Los campos de texto son uno de los elementos m&aacute;s comunes en la red. Nos sirven para ingresar una palabra o una linea de texto.</p>
+				<p>Para ingresar un campo de texto simple utilizamos la etiqueta <strong>&lt;input&gt;</strong></p>
+				<p>La etiqueta &lt;input&gt; se utiliza en conjunto con su atributo "type". El cual define la etiqueta como un campo de texto.</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<span>&lt;form action="scripts/script.php" method="POST" id="miFormulario"&gt;</span>
+						<span class="indentx1">&lt;legend&gt;Datos Personales&lt;/legend&gt;</span>
+							<span class="indentx2">&lt;label for="tu-nombre"&gt;Nombre:&lt;/label&gt;</span>
+							<span class="indentx2">&lt;input type="text" value="nombre" size="40" maxlength="10" /&gt;</span>
+					<span>&lt;/form&gt;</span>
+				</code>
+				<p>Este c&oacute;digo luce as&iacute;</p>
+				<code>
+					<form action="scripts/script.php" method="POST" id="miFormulario">
+						<fieldset>
+							<legend>Datos Personales</legend>
+							<label for="tu-nombre">Nombre:</label>
+							<input type="text" value="nombre" size="40" maxlength="10" />
+						</fieldset>
+					</form>
+				</code>
+				<h3>Descripci&oacute;n</h3>
+				<p>Los atributos que la etiqueta contiene son:</p>
+				<dl>
+					<dt>type</dt>
+					<dd>El valor de este atributo define el tipo de datos que el campo de texto recibe, en este caso su valor es "text".</dd>
+					<dt>value</dt>
+					<dd>El atributo "value" especifica el texto que por defecto almacena el campo de texto. Este texto es enviado al servidor en caso que ning&uacute;n otro se ingrese</dd>
+					<dt>size</dt>
+					<dd>Los navegadores crean por defecto campos de texto de 20 caracteres de longitud, a trav&eacute;s de este atributo podemos cambiarlo. (Recuerda que tambi&eacute;n podemos hacerlo desde CSS.)</dd>
+
+					<dt>maxlength</dt>
+					<dd>Los campos de texto pueden contener infinitos caracteres, en ocaciones es de utilidad limitar esta cantidad, para eso podemos utilizar el atributo maxlength</dd>
+				</dl>
+				<h4>M&aacute;s ejemplos de campo de texto</h4>
+				<code>
+					<fieldset>
+					<legend>Solo lectura</legend>
+
+			            <label>No puedes escribir:</label>
+			            <input type="text" readonly="readonly" />
+
+			        </fieldset>
+
+			        <fieldset>
+			        <legend>Password / Contrase&ntilde;a</legend>
+
+			            <label>Ingresela:</label>
+			            <input type="password" maxlength="10" />
+
+			        </fieldset>
+				</code>
+			    <p>Este c&oacute;digo luce as&iacute;</p>
+				<code>
+					<span>&lt;label>No puedes escribir:&lt;/label&gt;</span>
+			        <span>&lt;input type="text" readonly="readonly" /&gt;</span>
+				</code>
+				<code>
+					<span>&lt;label>Ingresela:&lt;/label&gt;</span>
+			        <span>&lt;input type="password" maxlength="10" /&gt;</span>
+				</code>
+				<h3>Descripci&oacute;n</h3>
+				<p>Los atributos y valores nuevos son:</p>
+				<dl>
+					<dt>readonly</dt>
+					<dd>El valor "readonly" indica que el valor de este campo no se puede modificar mientras este valor exista.</dd>
+					<dt>type="password"</dt>
+					<dd>El valor "password" del atributo type funciona de la misma manera que el valor "text", excepto que reemplaza las letras por aster&iacute;scos o circulos.</dd>
+				</dl>
+			</div><!--.article-->
+
+			<div class="article">
+				<h2>&Aacute;reas de texto</h2>
+				<p>Cuando es necesario que los usuarios ingresen m&aacute;s de una linea de texto, podemos utilizar la etiqueta &lt;textarea&gt;.</p>
+				<p>A diferencia que la etiqueta &lt;inpuy&gt;, la etiqueta &lt;textarea&gt; requiere una etiqueta de apertura y una de cierre, todo lo que se ingrese entre estas etiquetas corresponder&aacute; al texto por defecto de la caja de texto.</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<fieldset>
+				        <legend>Area de Texto</legend>
+				        <label>Ingresa tu comentario</label>
+				        <textarea name="comentario" cols="70" rows="8"></textarea>
+			    	</fieldset>
+				</code>
+				<code>
+					<span>&lt;fieldset&gt;</span>
+				        <span class="indentx1">&lt;legend&gt;Area de Texto&lt;/legend&gt;</
+				        <span class="indentx1">&lt;label&gt;Ingresa tu comentario&lt;/label&gt;</span>
+				        <span class="indentx1">&lt;textarea name="comentario" cols="70" rows="8"&gt;&lt;/textarea&gt;</span>
+				    <span>&lt;/fieldset&gt;</span>
+				</code>
+				<h3>Descripci&oacute;n</h3>
+				<p>Los atributos y valores nuevos son:</p>
+				<dl>
+					<dt>row</dt>
+					<dd>Especifica el n&uacute;mero de filas que el area de texto mostrar&aacute;. Si el usuario supera este l&iacute;mite, el campo crear&aacute; autom&aacute;ticamente un barra de navegaci&oacute;n al costado.</dd>
+					<dt>cols</dt>
+					<dd>Indica el ancho del campo de texto medido en el n&uacute;mero de caracteres que puede almacenar.</dd>
+				</dl>
+			</div><!--.article-->
+
+			<div class="article">
+				<h2>Subida de archivos</h2>
+				<p>Los navegadores pueden recibir documentos y transmitirlos desde el disco duro del usuario.</p>
+				<p>Para crear un campo que permita elegir un archivo desde el computador utilizamos la etiqueta &lt;input&gt; y el atributo "type" pero con el valor "file".</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<label>Suba su archivo:</label>
+					<input type="file" />
+				</code>
+				<code>
+					<span>&lt;label&gt;Suba su archivo:&lt;/label&gt;</span>
+					<span>&lt;input type="file" /&gt;</span>
+				</code>
+			</div><!--.article-->
+
+			<div class="article">
+				<h2>Checkbox</h2>
+				<p>Los checkbox se crean a trav&eacute;s de la etiqueta &lt;input&gt; y el atributo "type" pero con el valor "checkbox".</p>
+				<p>Puedes crear uno o un grupo de campos de selecci&oacute;n asign&aacute;ndoles el mismo valor a su atributo "name".</p>
+				<p>La caracter&iacute;stica m&aacute;s importante de estos elementos, es que el usuario puede seleccionar m&aacute;s de uno a la vez.</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<fieldset>
+			        <legend>Checkbox - Me gusta:</legend>
+
+			        	<input type="checkbox" name="opcion" checked="checked" /><label> Comer</label>
+			            <input type="checkbox" name="opcion" /><label> Dormir</label>
+			            <input type="checkbox" name="opcion" /><label> Ver televisi&oacute;n</label>
+			            <input type="checkbox" name="opcion" /><label> Leer</label>
+
+			        </fieldset>
+				</code>
+				<code>
+					<span>&lt;fieldset&gt;</span>
+			        <span>&lt;legend&gt;Checkbox - Me gusta:&lt;/legend&gt;</span>
+			        	<span class="indentx1">&lt;input type="checkbox" name="opcion" checked="checked" /&gt;&lt;label&gt; Comer&lt;/label&gt;</span>
+			            <span class="indentx1">&lt;input type="checkbox" name="opcion" /&gt;&lt;label&gt; Dormir&lt;/label&gt;</span>
+			            <span class="indentx1">&lt;input type="checkbox" name="opcion" /&gt;&lt;label&gt; Ver televisi&oacute;n&lt;/label&gt;</span>
+			            <span class="indentx1">&lt;input type="checkbox" name="opcion" /&gt;&lt;label&gt; Leer&lt;/label&gt;</span>
+			        <span>&lt;/fieldset&gt;</span>
+				</code>
+				<h3>Descripci&oacute;n</h3>
+				<p>Los atributos y valores nuevos son:</p>
+				<dl>
+					<dt>type="checkbox"</dt>
+					<dd>El valor indica que el elemento &lt;input&gt; es del tipo "checkbox".</dd>
+					<dt>checked="checked"</dt>
+					<dd>Podemos seleccionar un elemento por defecto a trav&eacute;s de este atributo.</dd>
+				</dl>
+			</div><!--.article-->
+
+			<div class="article">
+				<h2>Botones de radio</h2>
+				<p>Los botones de radio se crean a trav&eacute;s de la etiqueta &lt;input&gt; y el atributo "type" pero con el valor "radio".</p>
+				<p>A diferencia que los botones de selecci&oacute;n, el atributo "name" es <strong>obligatorio</strong>. Esto porque los botones de radio siempre estar&aacute;n agrupados l&oacute;gicamente y el usuario s&oacute;lo podr&aacute; elegir uno.</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<fieldset>
+			        <legend>Radio Buttons</legend>
+			        	<input type="radio" name="opcion" value="uch" /> <label>Universidad Cat&oacute;lica</label>
+			            <input type="radio" name="opcion" value="cc" /> <label>Colo Colo</label>
+			            <input type="radio" name="opcion" value="uc" /> <label>U. de Chile</label>
+			    	</fieldset>
+				</code>
+				<code>
+					<span>&lt;fieldset&gt;</span>
+			        <span>&lt;legend&gt;Radio Buttons&lt;/legend&gt;</span>
+			        	<span class="indentx1">&lt;input type="radio" name="opcion" value="uch" /&gt; &lt;label&gt;Universidad Cat&oacute;lica&lt;/label&gt;</span>
+			            <span class="indentx1">&lt;input type="radio" name="opcion" value="cc" /&gt; &lt;label&gt;Colo Colo&lt;/label&gt;</span>
+			            <span class="indentx1">&lt;input type="radio" name="opcion" value="uc" /&gt; &lt;label&gt;U. de Chile&lt;/label&gt;</span>
+			    	<span>&lt;/fieldset&gt;</span>
+				</code>
+				<h3>Importante</h3>
+				<p>Podr&aacute;s notar que cada boton de radio tiene el mismo valor para el atributo "name", esto es as&iacute; porque este valor permite al servidor identificar la selecci&oacute;n del usuario.</p>
+				<p>El valor del atributo "value" sin embargo, ya que esta es la informaci&oacute;n que almacena la selecci&oacute;n del usuario.</p>
+			</div><!--.article-->
+
+			<div class="article">
+				<h2>Men&uacute; de selecciones</h2>
+				<p>Los men&uacute; de selecciones son una opci&oacute;n para entregar a los usuarios una lista de opciones, desde la cual pueden elegir una preferencia.</p>
+				<h4>Ejemplo b&aacute;sico:</h4>
+				<code>
+					<fieldset>
+			        <legend>Selecci&oacute;nes</legend>
+			        	<label>Selecci&oacute;n normal</label>
+			            <select name="colores">
+			            	<option value="r">Rojo</option>
+			                <option value="g">Verde</option>
+			                <option value="b">Azul</option>
+			        	</select>
+			    	</fieldset>
+				</code>
+				<code>
+					<span>&lt;fieldset&gt;</span>
+			        <span>&lt;legend&gt;Selecci&oacute;nes&lt;/legend&gt;</span>
+			        	<span class="indentx1">&lt;label&gt;Selecci&oacute;n normal&lt;/label&gt;</span>
+			            <span class="indentx1">&lt;select name="colores"&gt;</span>
+			            	<span class="indentx2">&lt;option value="r"&gt;Rojo&lt;/option&gt;</span>
+			                <span class="indentx2">&lt;option value="g"&gt;Verde&lt;/option&gt;</span>
+			                <span class="indentx2">&lt;option value="b"&gt;Azul&lt;/option&gt;</span>
+			        	<span class="indentx1">&lt;/select&gt;</span>
+			    	<span>&lt;/fieldset&gt;</span>
+				</code>
+				<h3>Descripci&oacute;n</h3>
+				<p>Las etiquetas son:</p>
+				<dl>
+					<dt>select</dt>
+					<dd>La etiqueta &lt;select&gt; indica que el elemento despliegar&aacute; una serie de opciones para el usuario</dd>
+					<dt>name="colores"</dt>
+					<dd>El valor del atributo name se env&iacute;a al servidor para reconocer la selecci&oacute;n hecha por el usuario.</dd>
+					<dt>option y "value"</dt>
+					<dd>Cada elemento &lt;option&gt; contiene un texto que representa la opci&oacute;n, el valor del atributo "value" es el valor que se env&iacute;a al servidor.</dd>
+				</dl>
+				</dl>
+				<h4>M&aacute;s ejemplos de menu de selecciones</h4>
+				<h5>Men&uacute; Expandido</h5>
+				<p>Para visualizar m&aacute;s de una opci&oacute;n en el menu, podemos utilizar el atributo "multiple" con el valor "multiple".</p>
+				<p>Para especificar cu&aacute;ntas opciones son visibles utilizamos el atributo "size" y a su valor le asignamos la cantidad de elementos visibles.</p>
+				<code>
+					<span>&lt;fieldset&gt;</span>
+					<span>&lt;label&gt;Selecci&oacute;n multiple&lt;/label&gt;</span>
+			            <span class="indentx1">&lt;select name="normal" multiple="multiple" size="4"&gt;</span>
+			            	<span class="indentx2">&lt;option&gt;Rojo&lt;/option&gt;</span>
+			                <span class="indentx2">&lt;option&gt;Azul&lt;/option&gt;</span>
+			                <span class="indentx2">&lt;option&gt;Verde&lt;/option&gt;</span>
+			                <span class="indentx2">&lt;option&gt;Amarillo&lt;/option&gt;</span>
+			                <span class="indentx2">&lt;option&gt;Negro&lt;/option&gt;</span>
+			        	<span class="indentx1">&lt;/select&gt;</span>
+			    	<span>&lt;/fieldset&gt;</span>
+				</code>
+				<code>
+					<fieldset>
+					<label>Selecci&oacute;n multiple</label>
+			            <select name="normal" multiple="multiple" size="4">
+			            	<option>Rojo</option>
+			                <option>Azul</option>
+			                <option>Verde</option>
+			                <option>Amarillo</option>
+			                <option>Negro</option>
+			        	</select>
+			    	</fieldset>
+				</code>
+				<h5>Agrupar opciones</h5>
+				<p>Podemos crear grupos conceptuales de opciones a trav&eacute;s de la etiqueta &lt;optgroup&gt;</p>
+				<p>Esta etiqueta requiere del atributo "label" para definir el t&iacute;tulo del grupo</p>
+				<code>
+					<span>&lt;fieldset&gt;</span>
+						<span class="indentx1">&lt;select name="grupos" multiple="multiple" size="6"&gt;</span>
+			            	<span class="indentx2">&lt;optgroup label="Vegetales"&gt;</span>
+			                    <span class="indentx3">&lt;option&gt;Lechuga&lt;/option&gt;</span>
+			                    <span class="indentx3">&lt;option&gt;Tomate&lt;/option&gt;</span>
+			               <span class="indentx2"> &lt;/optgroup&gt;</span>
+
+			                <span class="indentx2">&lt;optgroup label="Animales"&gt;</span>
+			                    <span class="indentx3">&lt;option&gt;Vacuno&lt;/option&gt;</span>
+			                    <span class="indentx3">&lt;option&gt;Pollo&lt;/option&gt;</span>
+			                <span class="indentx2">&lt;/optgroup&gt;</span>
+			           <span class="indentx1"> &lt;/select&gt;</span>
+			    	<span>&lt;/fieldset&gt;</span>
+				</code>
+				<code>
+					<fieldset>
+			        	<select name="grupos" multiple="multiple" size="6">
+			            	<optgroup label="Vegetales">
+			                    <option>Lechuga</option>
+			                    <option>Tomate</option>
+			                </optgroup>
+
+			                <optgroup label="Animales">
+			                    <option>Vacuno</option>
+			                    <option>Pollo</option>
+			                </optgroup>
+			            </select>
+
+			    	</fieldset>
+				</code>
+
+			</div><!--.article-->
+
+			<div class="article">
+				<h2>Botones</h2>
+				<p>Existe una serie de tipos de de botones que podemos agregar a nuestros sitio. Veremos algunos:</p>
+				<h4>1. Bot&oacute;n sumbit</h4>
+				<p>Este bot&oacute;n es el m&aacute;s importante porque permite enviar toda la informaci&oacute;n recolectada en un formulario.</p>
+				<p>Recuerda que por cada formulario s&oacute;lo puedes tener un boton del tipo "submit" </p>
+				<code>
+					<span>&lt;label>Enviar datos&lt;/label&gt;</span>
+					<span>&lt;input type="submit" value="Enviar" name="enviar" /&gt;</span>
+				</code>
+				<p>El c&oacute;digo anterior se visualizar&iacute;a as&iacute;</p>
+				<code>
+					<label>Enviar datos</label>
+					<input type="submit" value="Enviar" name="enviar" />
+				</code>
+				<h4>Otros tipos de botones</h4>
+				<h3>Boton reset</h3>
+				<p>El bot&oacute;n tipo reset limpia todos los campos de un formulario determinado. Toda la informaci&ooacute;n ingresada por el usuario desaparece.</p>
+				<code>
+					<span>&lt;label&gt;Limpiar Todo&lt;/label&gt;</span>
+					<span>&lt;input type="reset" value="Limpiar" /&gt;</span>
+				</code>
+				<p>El c&oacute;digo anterior se visualizar&iacute;a as&iacute;</p>
+				<code>
+					<label>Limpiar Todo</label>
+					<input type="reset" value="Limpiar" />
+				</code>
+				<h3>Boton con imagen</h3>
+				<code>
+					<span>&lt;label&gt;Boton con imagen&gt;/label&gt;</span>
+					<span>&lt;input type="image" name="enviar" src="boton.png" /&gt;</span>
+				</code>
+				<p>El c&oacute;digo anterior se visualizar&iacute;a as&iacute;</p>
+				<code>
+					<label>Boton con imagen</label>
+					<input type="image" name="enviar" src="boton.png" />
+				</code>
+				<h3>Boton simple</h3>
+				<code>
+					<span>&lt;label&gt;Boton simple&gt;/label&gt;</span>
+					<span>&lt;input type="button" value="boton" /&gt;</span>
+				</code>
+				<p>El c&oacute;digo anterior se visualizar&iacute;a as&iacute;</p>
+				<code>
+					<label>Boton simple</label>
+					<input type="button" value="boton" />
+				</code>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>

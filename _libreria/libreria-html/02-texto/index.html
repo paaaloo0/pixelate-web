@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title> HTML - Etiquetas de Texto y de Imagen</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+	
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Etiquetas de Texto en HTML</h1>
+			<blockquote><p>Elige etiquetas que describan tu contenido de la manera m&aacute;s certera posible</p></blockquote>
+			<p>Textos en HTML creados sem&aacute;nticamente asegura que tus contenidos est&eacute;n disponibles a una mayor&iacute;a de dispositivos capaces de interpretar HTML</p>
+			<p>No te preocupes acerca de c&oacute;mo lucen, m&aacute;s adelante podr&aacute;as modificar su estilo y dise&ntilde;o a trav&eacute;s de CSS</p>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+				<h2>P&aacute;rrafo - &lt;p&gt;</h2>
+				<p>La etiqueta &lt;p&gt; es la m&aacute;s rudimentaria de las etiquetas de texto.</p>
+				<p>Para crear un p&aacute;rrafo utiliza la etiqueta de apertura <strong>&lt;p&gt;</strong> al comienzo de tu texto y la etiqueta de cierre <strong>&lt;/p&gt;</strong></p>
+				
+				<h3>Recuerda que:</h3>
+				<p>Los p&aacute;rrafos pueden contener texto, im&aacute;genes y otros elementos <strong>en linea</strong>. Pero nunca pueden contenedor otros elementos <strong>en bloque</strong> como otros p&aacute;rrafos</p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Cabeceras - &lt;h1&gt; a &lt;h6&gt;</h2>
+				<p>Las cabeceras aportan un orden jer&aacute;rquico a nuestros documentos, adem&aacute;s mejoran con la accesibilidad de nuestros sitios y ayudan a los buscadores a interpretar mejor nuestros contenidos.</p>
+				<p>Existen 6 niveles de cabecera que podemos utilizar, comenzado desde el mayor &lt;h1&gt; que representa el m&aacute;ximo nivel en la jerarqu&iacute;a hasta el &lt;h6&gt; que es el m&iacute;nimo</p>
+				<p>Para crear una cabecera debes envolver tu texto en la etiqueta de apertura &lt;h1&gt; (o el nivel que desees) y la etiqueta de cierre &lt;/h1&gt;.</p>
+				<p>Ejemplos</p>
+				<h1><p>Cabecera h1</p></h1>
+				<h2>Cabecera h2</h2>
+				<h3>Cabecera h3</h3>
+				<h4>Cabecera h4</h4>
+				<h5>Cabecera h5</h5>
+				<h6>Cabecera h6</h6>
+				<p>Por defecto los navegadores muestran las cabeceras en <strong>negrita</strong>, cada una con un <strong>interlineado</strong> diferente y de distintos <strong>tama&ntilde;os</strong></p>
+				<h3>Recuerda que:</h3>
+				<p>Debes utilizar las cabeceras de manera consistente a trav&eacute;s de tu documento. Es decir, si decides que los t&iacute;tulos de tus art&iacute;culos ser&aacute;n del tipo &lt;h3&gt; entonces aseg&uacute;rate que todos tengan la misma etiqueta.</p>
+				<p>Las cabeceras pueden contener texto, ima&aacute;genes y otros elementos (en bloque o en linea)</p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Citas - &lt;blockquote&gt;</h2>
+				<p>La etiqueta &lt;blockquote&gt; se utiliza cundo tenemos un bloque de texto o cita, que pertenezca a otra fuente.</p>
+				<p>Se recomienda que el texto ingresado entre las etiquetas &lt;blockquote&gt; est&eacute; envuelto en otra etiqueta, como p&aacute;rrafos, cabeceras o listas</p>
+				<p>Ejemplo:</p>
+				<code>
+				<blockquote cite="http://www.theclinic.cl/2012/09/09/guia-para-ser-un-gordito-feliz-o-casi/"><p>Hace un tiempo eras un chavito de ocho añitos. Tus padres se divorcian. Cambias constantemente de escuela. No hablas con nadie durante semanas. Pero de repente, por arte de magia, superas todo eso y estás bien. ¿Cómo lo has hecho? Montones de espagueti y salchichas de lata, ni un minuto de ejercicio y Chocotorros a punta de pala. El viaje había comenzado.</p></blockquote>
+				</code>
+				<p>El c&oacute;digo para el elemento anterior es:</p>
+				<code>
+				<pre>
+<span>&lt;blockquote cite="http://www.theclinic.cl/2012/09/09/guia-para-ser-un-gordito-feliz-o-casi/"&gt;</span>
+<span class="indentx1">&lt;p&gt;Hace un tiempo (...).&lt;/p&gt;</span>
+<span>&lt;/blockquote>&lt;/p&gt;</span>
+				</pre>
+				</code>
+				<p>Notar&aacute;s el uso del atributo "cite", &eacute;ste le indica al navegador la URL origen de la cita.</p>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Im&aacute;genes - &lt;img&gt;</h2>
+				<p>En una p&aacute;gina web, las im&aacute;genes aparecen de dos formas, como contenido de la p&aacute;gina o como elementos de dise&ntilde;o en la forma de fondos, &iacute;conos u otros. Estos &uacute;ltimos, se insertan a trav&eacute;s de CSS y los primeros directamente en el c&oacute;digo HTML</p>
+				<p>Para agregar una imagen en HTML, utilizamos la etiqueta &lt;img /&gt;</p>
+				<p>De inmediato notar&aacute;s que esta etiqueta tiene un "/" al final. La raz&oacute;n es que la etiqueta &lt;img /&gt; no requiere una etiqueta de cierre</p>
+				<p>Esta etiqueta solo le indica al navegador la ubicaci&oacute;n de una imagen y &eacute;ste se encarga de ponerla en el mismo lugar donde se encuentra la etiqueta</p>
+				<p>Ejemplo:</p>
+				<p>Este es un icono: <img src="icono.png" alt="Icono rojo" /></p>
+				<p>El c&oacute;digo es el siguiente:</p>
+				<code><span>&lt;img src="icono.png" alt="Icono rojo" /&gt;</span></code>
+				<p>La etiqueta imagen requiere dos atributos: "src" y "alt"</p>
+				<p>El atributo "src" le indica al navegador la URL donde la imagen esta ubicada</p>
+				<p>El atributo "alt" le entrega al navegador un texto alternativo en caso que la imagen no pueda ser desplegada</p>
+				
+				
+			</div><!--.article-->
+			
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>HTML - Contenedores</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Contenedores en HTML</h1>
+			<blockquote><p>Los elementos contenedores nos permiten agrupar otros elementos HTML.</p></blockquote>
+			<p>Existen dos elementos contenedores para HTML, estos son las etiquetas &lt;div&gt; y &lt;span&gt;. La principal diferencia entre ambos es que el primero es un elemento en bloque y el segundo es un elemento en linea.</p>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+				<h2>DIV - &lt;div&gt;</h2>
+				<p>La etiqueta &lt;div&gt; significa <em>division</em> y no representa ning&uacute;n contenido espec&iacute;fico dentro del sitio.</p>
+				<p>Su funci&oacute;n es contener elementos en una sola unidad. Esta funcionalidad es de gran utilidad para posicionar a trav&eacute;s de CSS componentes dentro de la p&aacute;gina.</p>
+				
+				<p>Los elementos &lt;div&gt; se utilizan en conjunto con los atributos "id" y "class" para definir su estilo y el de sus elementos descendientes</p>
+				
+				<p>Para definir un &lt;div&gt; s&oacute;lo creamos su etiqueta de apertura y de cierre. Todos los elementos que contenga ser&aacute;n sus descendientes y podr&aacute;n moverse como una sola unidad</p>
+				
+				<h4>Ejemplo</h4>
+				
+				<code>
+					<span>&lt;div&gt;</span>
+					<span class="indentx1">&lt;p&gt;Este es un p&aacute;rrafo&lt;/p&gt;</span>
+					<span class="indentx1">&lt;p&gt;Y estoy contenido dentro de un &lt;div&gt;&lt;/p&gt;</span>
+					<span>&lt;/div&gt;</span>
+				</code>
+				
+				<h3>Recuerda que:</h3>
+				<p>Los elementos &lt;div&gt; son elementos <strong>en bloque</strong>. Por lo tanto siempre se crear&aacute;n en una linea nueva.</p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Span - &lt;span&gt;</h2>
+				<p>Los elementos &lt;span&gt; no tienen un significado especial, solo nos sirven como contenedores de texto u otros elementos simples. No son recomendados para agrupar muchos elementos.</p>
+				<p>Podemos utilizarlo en conjunto con los atributos "id" y "class" para referenciarlo desde CSS.
+				<h4>Ejemplo</h4>
+				<p> En una lista queremos que el segundo elemento sea de color rojo</p>
+				<code>
+					<span>&lt;ul&gt;</span>
+						<span class="indentx1">&lt;li&gt;Andrea&lt;/li&gt;</span>
+						<span class="indentx1">&lt;li&gt;&lt;span class="rojo"&gt;Camila&lt;/span&gt;&lt;/li&gt;</span>
+						<span class="indentx1">&lt;li&gt;Cindy&lt;/li&gt;</span>
+						<span class="indentx1">&lt;li&gt;Natalia&lt;/li&gt;</span>
+					<span>&lt;/ul&gt;</span>
+				</code>
+				<p>Este c&oacute;digo se transformar&aacute; en:</p>
+				<ul>
+					<li>Andrea</li>
+					<li><span class="rojo">Camila</span></li>
+					<li>Cindy</li>
+					<li>Natalia</li>
+				</ul>
+				<h3>Recuerda que:</h3>
+				<p>Los elementos &lt;span&gt; son elementos <strong>en linea</strong>.</p>
+
+			</div><!--.article-->
+
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+
+</body>
+</html>

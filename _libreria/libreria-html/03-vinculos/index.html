@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title> HTML Intro - V&iacute;nculos</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+	
+	<div id="wrapper">
+
+		<div id="header">
+			<h1 id="inicio">Hiperv&iacute;nculos</h1>
+			<blockquote><p>Los hiperv&iacute;nculos son el cimiento donde se sostiene la web</p></blockquote>
+		</div>
+	
+		<div id="content">
+			<div class="article">
+				<h2>Introducci&oacute;n:</h2>
+				<p>Los v&iacute;nculos en la web se crean con la etiqueta &lt;a&gt; que viene de la palabra "anchor" que significa ancla.</p>
+				<p>El elemento "a" puede contener texto, una imagen y otros elementos HTML, pero nunca otros elementos "a". Sea cual sea el elemento, este se transformar&aacute; en un elemento "cliqueable" y su estilo cambiar&aacute; para indicar que es un link.</p>
+				<p>Las anclas equieren el atributo "href" y opcionalmente se pueden agregar otros tales como "title" o "target".</p>
+				<p>El atributo <strong>href</strong> le indica al navegador d&oacute;nde debe dirigirse cuando el usuario haga clic en el elemento. Sin este atributo el ancla no se comportar&aacute; como hiperv&iacute;nculo, sin embargo, seguir&aacute; siendo un ancla (ver v&iacute;nculos del mismo documento para m&aacute;s informaci&oacute;n).</p>
+				<p>El atributo title crea una peque&ntilde;o mensaje sobre el link al poner el cursor sobre, &eacute;ste despliega el valor del atributo. "Target" en tanto, le indica al navegador si debe abrir el nuevo v&iacute;nculo en la misma ventana o en una nueva</p>
+				<p>Existen 3 tipos de v&iacute;nculos:</p>
+				<ul>
+					<li>A otros sitios</li>
+					<li>Dentro del mismo sitio</li>
+					<li>Dentro del mismo documento</li>
+				</ul>
+				<h3>Recuerda que:</h3>
+				<p>Los elementos ancla son elementos en linea.</p>
+			</div>
+	
+			
+			<div class="article">
+				<h2>V&iacute;nculos a otros sitios</h2>
+				<p>Un link a otro sitio luce asi:</p>
+				<code><span>&lt;a href="http://www.google.cl" title="Visitar Google.cl" target="_blank"&gt;Entrar a Google&lt;/a&gt;</span></code>
+				<p>Este c&oacute;digo resulta en:</p>
+				<p><a href="http://www.google.cl" title="Visitar Google.cl" target="_blank">Entrar a Google</a></p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>V&iacute;nculos dentro del mismo sitio</h2>
+				<p>Un link a un documento dentro del sitio sigue el mismo patr&oacute;n que el anterior, la &uacute;nica diferencia es que el valor del atributo "href" es una ruta relativa y no absoluta:</p>
+				<code><span>&lt;a href="pagina.html" title="Entra a una p&aacute;gina de este sitio" target="_self"&gt;Entra a una p&aacute;gina de este sitio&lt;/a&gt;</span></code>
+				<p>Este c&oacute;digo resulta en:</p>
+				<p><a href="pagina.html" title="Entra a una p&aacute;gina de este sitio" target="_self">Entra a una p&aacute;gina de este sitio</a></p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>V&iacute;nculos dentro del mismo documento</h2>
+				<p>Un link a un documento del mismo documento nos permite crear un v&iacute;nculo que apunte a alguna secci&oacute;n dentro de la misma p&aacute;gina donde nos encontramos.</p>
+				<p>En este proceso necesitamos dos elementos, el primero ser&aacute; el bot&oacute;n que apretemos para "saltar" a otra parte del documento. El segundo elemento es el destino del boto&oacute;n marcado con un atributo "id" que nos guiar&aacute;.</p>
+				<h4>Seleccionando el destino</h4>
+				<p>Para seleccionar el destino, agregamos un atributo "id" a &eacute;ste de la siguiente manera:</p>
+				<code><span>&lt;h1 id="inicio"&gt;Bienvenida&lt;/h1&gt;</span></code>
+				<p>Si revisas este documento, veras que el t&iacute;tulo de la p&aacute;gina tiene un "id" con valor inicio</p>
+				<h4>Crear el v&iacute;nculo</h4>
+				<p>Para hacerlo, debes armar una etiqueta "ancla" normalmente, la diferencia es que el valor del atributo "href", debe ser el valor del "id" del elemento destino, antecedido del simbolo "#". Por ejemplo</p>
+				<code><span>&lt;a href="#inicio"&gt;P&iacute;nchame para volver arriba&lt;/a&gt;</span></code>
+				<p>Este c&oacute;digo resulta en:</p>
+				<p><a href="#inicio">P&iacute;nchame para volver arriba</a></p>
+				<p>Puedes ver un ejemplo m&aacute;s completo si pinchas <a href="anclas.html">aqu&iacute;</a></p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>V&iacute;nculos con im&aacute;genes</h2>
+				<p>Crear v&iacute;nculos con im&aacute;genes sigue el mismo procedimiento que un link normal, la diferencia es que el contenido del link es una etiqueta &lt;img&gt;.</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<span>&lt;a href="http://www.facebook.com" title="Vis&iacute;tanos en Facebook" target="_blank"&gt;</span>
+						<span class="indentx1">&lt;img src="facebook.png" alt="Logo Facebook" /&gt;</span>
+					<span>&lt;/a&gt;</span>
+				</code>
+				<p>Este c&oacute;digo resulta en:</p>
+				<p><a href="http://www.facebook.com" title="Vis&iacute;tanos en Facebook" target="_blank"><img src="facebook.png" alt="Logo Facebook" /></a></p>
+			</div><!--.article-->
+			
+			
+		</div><!--#content-->
+	</div><!-- #wrapper --> 
+</body>
+</html>

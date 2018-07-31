@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Textos</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Formatear texto con CSS</h1>
+			<blockquote><p>Formatear texto nos permite definir jerarquías, contrastes y pesos entre otras propiedades. El objetivo es facilitar la comprensión de nuestros contenidos.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+				<h2>Alto de linea - line-height</h2>
+				<p>El atributo <span class="highlight">line-height</span> define la distancia entre lineas de base de un párrafo de texto.</p>
+				<p>En general los navegadores dividen el espacio extra sobre y bajo la linea de texto y posicionan el texto en el medio.</p>
+				<h3>Ejemplos:</h3>
+				<code>				
+					<span>p {line-height: 2;}</span>
+					<span>p {line-height: 2em;}</span>
+					<span>p {line-height: 200%;}</span>
+				</code>
+				<h3>Descripción</h3>
+				<p>El primer ejemplo muestra sólo un número, éste se multiplica por el tamaño de la fuente para determinar el alto de la linea.</p>
+				<p>El segundo y tercer ejemplos definen el alto de linea utilizando unidades de medida, por lo tanto, si el tamaño heredado del elemento es 16px, entonces el alto de la linea será 32px.</p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Indentar - text-indent</h2>
+				<p>El atributo <span class="highlight">text-indent</span> mueve la primera linea de un texto una determinada distancia.</p>
+				<h3>Ejemplos</h3>
+				<code>				
+					<span>p {text-indent: 2em;}</span>
+					<span>p {text-indent: 25%}</span>
+					<span>p {text-indent: -20px;}</span>					
+				</code>
+				<h3>Descripción</h3>
+				<p>Notar que en el tercer ejemplo la indentación es negativa para mover la linea hacia la izquierda.</p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Alineación - text-align</h2>
+				<p>El atributo <span class="highlight">text-align</span> nos permite alinear los elementos en bloque de un contenedor en el eje horizontal.</p>
+				<h3>Ejemplos</h3>
+				<code>				
+					<span>p {text-align: left;}</span>
+					<span>p {text-align: right;}</span>
+					<span>p {text-align: center;}</span>
+					<span>p {text-align: justify;}</span>
+				</code>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Visibilidad - visibility</h2>
+				<p>El atributo <span class="highlight">visibility</span> no es exclusivo de los textos, puede utilizarse con cualquier tipo de selector.</p>
+				<p>Este atributo permite ocultar el elemento, sin embargo, el espacio que ocupa se mantiene dejando un agujero en el sitio.</p>
+				<h3>Ejemplo</h3>
+				<code>				
+					<span> h2 {visibility: visible} - Estado por defecto</span>
+					<span> h2 {visibility: hidden} - Elemento invisible</span>
+				</code>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Decoraciones</h2>
+				<h3><span class="highlight">text-decoration</span></h3>
+				<code>				
+					<span>p {text-decoration: underline;} - Subrayar el texto</span>
+					<span>p {text-decoration: overline;} - Linea arriba del texto</span>
+					<span>p {text-decoration: line-through;} - Linea sobre el texto</span>
+					<span>p {text-decoration: blink;} - Texto parpadea</span>
+					<span>p {text-decoration: none;} - Quitar toda la decoración del texto</span>
+				</code>
+				<h3><span class="highlight">text-transform</span></h3>
+				<code>				
+					<span>p {text-transform: none;} - Deja el texto tal como se escribió</span>
+					<span>p {text-transform: capitalize;} - Subir la primera letra de cada palabra</span>
+					<span>p {text-transform: lowercase;} - Todas las letras minúscula</span>
+					<span>p {text-transform: uppercase;} - Todas las letras mayúscula</span>
+				</code>
+				<h3><span class="highlight">letter-spacing</span> y <span class="highlight">word-spacing</span></h3>
+				<code>				
+					<span>p {letter-spacing: 8px;} - Espacio entre letras</span>
+					<span>p {word-spacing: 1.5em} - Espacio entre palabras</span>
+				</code>
+			</div><!--.article-->
+			
+			
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+	
+	<div id="paginacion">
+		<ul>
+			<li><a href="index.html">1</a></li>
+			<li><a href="#" class="actual">2</a></li>						
+		</ul>
+	</div>
+
+</body>
+</html>

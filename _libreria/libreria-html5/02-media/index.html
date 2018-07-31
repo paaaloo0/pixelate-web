@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>HTML5 - Media - Audio</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Audio</h1>
+			<blockquote><p>Lo más importante del audio, es nunca permitir que reproduzca automáticamente. Eso es falta de respeto.</p></blockquote>
+			<p>HTML5 permite incluir reproducir un archivo de audio fácilmente. Sin embargo, hay unas cuantas consideraciones a la hora de determinar qué formatos utilizamos.</p>
+			<p>Si bien MP3 es prácticamente un formato universal en nuestros tiempos, no es una tecnología gratuita. Esto significa que debemos proveer a de otros formatos a aquellos navegadores que no son capaces de decodificarlo.</p>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Etiqueta audio y autoplay.</h2>
+				<p>La etiqueta <span class="highlight">audio</span> funciona de manera similiar a la etiqueta "img" en su construcción:</p>
+				<code>
+					<span>&lt;audio src="s_bach.mp3"&gt;</span>
+					<span>&lt;/audio&gt;</span>
+				</code>
+				<p>El código le dice al navegador que comience a cargar el archivo de audio especificado con el atributo "src", sin embargo, este no se reproducirá hasta que le indiquemos</p>
+				<h3>Atributo "autoplay"</h3>
+				<p>La etiqueta "audio" permite la inclusión del atributo autoplay. En términos de usabilidad, hacer que un archivo de audio o video se reproduzca automáticamente puede ser tremendamente molesto para el visitante, por lo tanto no es recomendable incluirlo a menos que sea estrictamente necesario.</p>
+				<p>El código entonces luce así:</p>
+				<code>
+					<span>&lt;audio src="s_bach.mp3" autoplay&gt;</span>
+					<span>&lt;/audio&gt;</span>
+				</code>
+				<p>Como ves el atributo no necesita de un valor específico, esto es porque el atributo mismo es del tipo <em>booleano</em>, es decir, si está presente el navegador lo utilizará, si no está presente no lo hará.</p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Loop</h2>
+				<p>Si quieres volver loco a tu usario entonces puedes utilizar el atributo loop a tu audio.</p>
+				<code>
+					<span>&lt;audio src="s_bach.mp3" autoplay loop&gt;</span>
+					<span>&lt;/audio&gt;</span>
+				</code>
+				<p>El resultado de este codigo es que el archivo se audio partirá nuevamente una vez que termine, infinitamente.</p>
+			</div>
+			
+			<div class="article">
+				<h2>Controles</h2>
+				<p>La correcta inclusión de un archivo de audio es con el atributo "controls", también es un valor booleano que presenta botones de control al usuario.</p>
+				<code>
+					<span>&lt;audio src="s_bach.mp3" controls&gt;</span>
+					<span>&lt;/audio&gt;</span>
+				</code>
+				<p>Ahora el archivo puedo controlarse:</p>
+				<code>
+					<audio src="s_bach.mp3" controls></audio>
+				</code>
+				<h3>Importante</h3>
+				<p>Cada navegador utilizará un estilo visual diferente para los controles que sea consistente con sus gráficas.</p>
+				<p>Es posible crear botones de control personalizados con HTML y CSS, sin embargo, su uso debe ser complementado con Javascript y el API de audio.</p>
+			</div>
+			
+			<div class="article">
+				<h2>Pre-carga</h2>
+				<p>La etiqueta audio permite al navegador cargar el audio tras bambalinas, esto es antes que comience la reproducción. La utilidad de este parámetro es que al presionar el botoón "reproducir" el archivo tendrá la suficiente carga como para comenzar a reproducirse inmediatamente.</p>
+				<code>
+					<span>&lt;audio src="s_bach.mp3" controls preload="none"&gt;</span><span>&lt;/audio&gt;</span>
+				</code>
+				<h3>Valores posibles</h3>
+				<dl>
+					<dt>none</dt>
+					<dd>Le decimos explícitamente al navegador que no pre-cargue el archivo.</dd>
+					<dt>auto</dt>
+					<dd>Cargar el audio. Si tienes más de un elemento de audio este atributo puede utilizar mucho ancho de banda.</dd>
+					<dt>metadata</dt>
+					<dd>Cargar sólo la metadata del archivo.</dd>
+				</dl>
+			</div>
+			
+			<div class="article">
+				<h2>Formatos de audio</h2>
+				<p>El mayor problema de los elementos como audio y video es el soporte a distintos formatos.</p>
+				<p>Como mencionamos al principio, el formato MP3 no es abierto. Eso significa que requiere una patente que algunos navegadores como Firefox(navegador OpenSource) no están dispuestos a pagar.</p>
+				<p>Para solucionar esta problemática la etiqueta audio permite la inclusión de más de un archivo a través de la etiqueta <span class="highlight">source</span>
+				<h4>Ejemplo</h4>
+				<code>
+					<span>&lt;audio controls preload="none"&gt;</span>
+						<span class="indentx1">&lt;source src="s_bach.ogg" /&gt;</span>			
+						<span class="indentx1">&lt;source src="s_bach.mp3" /&gt;</span>
+					<span>&lt;/audio&gt;</span>
+				</code>
+				<h3>Descripción</h3>
+				<p>Los navegadores que puedan reproducir el formato <em>.ogg</em>(formato abierto) lo utilizará e ignorará el resto.</p>
+				<p>Los navegadores que no reconozcan este formato, utilizarán la segunda opción.</p>
+				<p>Podemos asistir al navegador en reconocer el formato agregando el tipo de archivo:</p>
+				<code>
+					<span>&lt;audio controls preload="none"&gt;</span>
+						<span class="indentx1">&lt;source src="s_bach.ogg" type="audio/ogg" /&gt;</span>			
+						<span class="indentx1">&lt;source src="s_bach.mp3" type="audio/mpeg" /&gt;</span>
+					<span>&lt;/audio&gt;</span>
+				</code>
+				
+			</div>
+			
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+
+</body>
+</html>

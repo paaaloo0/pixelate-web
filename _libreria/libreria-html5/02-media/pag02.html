@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>HTML5 - Media - Video</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Video</h1>
+			<blockquote><p>Uno de los elementos más esperados y solicitados es la capacidad de los navegadores de reproducir video de forma nativa.</p></blockquote>
+			<p>La etiqueta <span class="highlight">video</span> funciona exactamente igual que la etiqueta <em>audio</em>.</p>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+				<h2>Atributos comunes con etiqueta audio</h2>
+				<dl>
+					<dt>autoplay</dt>
+					<dd></dd>
+					<dt>loop</dt>
+					<dd></dd>
+					<dt>preload</dt>
+					<dd></dd>
+					<dt>controls</dt>
+					<dt>src</dt>
+					<dd>Podemos definir la ruta a un video a través del atributo <em>src</em></dd>
+					<dt>source</dt>
+					<dd>Podemos definir rutas a distintos videos incluyendo etiquetas <em>source</em></dd> 
+				</dl>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Dimensiones</h2>
+				<p>La etiqueta video por naturaleza ocupa un espacio determinado, podemos definirlo a través de los atributos ancho y alto:</p>
+				<code>
+					&lt;video src="vid.mp4" controls width="480" height="270"&gt;
+					&lt;/video&gt;
+				</code>
+				<p>Este código luce así:</p>
+				<code>
+					<video src="vid.mp4" controls width="480" height="270">
+					</video>
+				</code>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Poster</h2>
+				<p>Podemos agregar una imagen que aparecerá en lugar del video hasta que esté sea reproducido. La imagen puede contener un frame del video o alguna gráfica especial:</p>
+				<code>
+					&lt;video src="vid.mp4" controls width="480" height="270" poster="poster.jpg"&gt;
+					&lt;/video&gt;
+				</code>
+				<p>Este código luce así:</p>
+				<code>
+					<video src="vid.mp4" controls width="480" height="270" poster="poster.jpg">
+					</video>
+				</code>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Formatos</h2>
+				<p>Al igual (o peor) que lo que sucede con audio, no todos los navegadores son capaces de decodificar los mismos formatos de video. En consecuencia, debemos dar opciones a éstos a través de la etiqueta <span class="highlight">source</span></p>
+				<h3>Navegadores y formatos</h3>
+				<dl>
+					<dt>MP4</dt>
+					<dd>Soportado por Internet Explorer 9, Google Chrome y Safari</dd>
+					<dt>Theora Video</dt>
+					<dd>Soportado por Firefox, Chrome y Opera</dd>
+					<dt>WebM</dt>
+					<dd>Soportado por Firefox,Chrome y Opera</dd>
+				</dl>
+				<h3>Uso de etiqueta source</h3>
+				<code>
+					<span>&lt;video controls width="480" height="270" poster="poster.jpg"&gt;</span>
+						<span class="indentx1">&lt;source src="vid.ogg" type="video/ogg"&gt;</span>
+						<span class="indentx1">&lt;source src="vid.mp4" type="video/mp4"&gt;</span>
+						<span class="indentx1">&lt;source src="vid.webm" type="video/webm"&gt;</span>
+					<span><&lt;/video&gt;</span>
+				</code>
+				<p>Este código luce así:</p>
+				<code>
+					<video controls width="480" height="270" poster="poster.jpg">
+						<source src="vid.mp4" type="video/mp4">
+						<source src="vid.ogg" type="video/ogg">
+						<source src="vid.webm" type="video/webm">
+					</video>
+				</code>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Herramientas para transformar videos</h2>
+				<p>Debido a que tenemos que preparar nuestros videos para distintos navegadores, podemos utilizar herramientas diseñadas para hacernos la tarea más fácil:</p>
+				<ul>
+					<li><a href="http://www.mirovideoconverter.com/" target="_blank">Miro Video Converter</a></li>
+					<li><a href="http://handbrake.fr/" target="_blank">Handbrake</a></li>
+				</ul>
+				<p>Ambos programas son gratuitos y disponibles para Mac o Windows.</p>
+			</div><!--.article-->
+			
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+
+</body>
+</html>

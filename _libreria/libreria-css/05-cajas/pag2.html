@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Modelo de Cajas II</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Modelo de Cajas II</h1>
+			<blockquote><p>Todo es una caja. Y además, todos los elementos contienen componentes que podemos modificar con CSS.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Padding</h2>
+				<p>La propiedad <span class="highlight">padding</span> nos permite modificar las dimensiones del espacio entre el borde y el área de contenidos.</p>
+				<p>Este valor lo podemos aplicar a cualquier elemento, sea en linea o en bloque.</p>
+				<p>Podemos asignar esta propiedad un lado a la vez o a todos lados al mismo tiempo de la siguiente manera:</p>
+				<ul>
+					<li>padding-top</li>
+					<li>padding-right</li>
+					<li>padding-bottom</li>
+					<li>padding-left</li>
+					<li>padding</li>
+				</ul>
+				<h3>Lados individuales</h3>
+				<code>
+					<span>div {padding-top: 40px;}</span>
+					<span>div {padding-right: 5px;}</span>
+					<span>div {padding-bottom: 50px;}</span>
+					<span>div {padding-left: 60px;}</span>
+				</code>
+				<p>Este código aplicado a nuestra caja se vería así:</p>
+				<code>
+					<div class="caja-overflow padding-lados">
+						<p>Cupcake ipsum dolor sit amet caramels. Dragée I love soufflé applicake chocolate cake pastry applicake. I love cheesecake chocolate bar fruitcake.</p>
+					</div>
+					<div class="clear"></div>
+				</code>
+				<h3>Lados al mismo tiempo</h3>
+				<code>
+					<span>div {padding: 40px 5px 50px 60px;}
+				</code>
+				<p>Podrás notar que el orden es el mismo del ejemplo anterior, comenzamos por arriba y seguimos según las manecillas del reloj con el lado derecho, abajo y finalmente izquierdo.</p>
+				<p>Este código aplicado a nuestra caja se vería así:</p>
+				<code>
+					<div class="caja-overflow padding-lados">
+						<p>Cupcake ipsum dolor sit amet caramels. Dragée I love soufflé applicake chocolate cake pastry applicake. I love cheesecake chocolate bar fruitcake.</p>
+					</div>
+					<div class="clear"></div>
+				</code>
+				<p>Existen tres formas adicionales de aplicar el padding:</p>
+				<code>
+					<span>div {padding: 20px;}</span>
+					<span>div {padding: 20px 10px;}</span>
+					<span>div {padding: 20px 50px 10px;}</span>
+				</code>
+				<p>Los valores corresponden a:</p>
+				<dl>
+					<dt>Cuando hay un valor</dt>
+					<dd>El valor corresponderá a los cuatro lados por igual.</dd>
+					<dt>Cuando hay dos valores</dt>
+					<dd>El primer valor corresponde a <em>top</em> y <em>bottom</em>. El segundo valor a <em>right</em> y <em>left</em></dd>
+					<dt>Cuando hay tres valores</dt>
+					<dd>El primer valor corresponde a <em>top</em>. El segundo valor a <em>left</em> y <em>right</em>. El tercero corresponde a <em>bottom</em></dd>
+				</dl>
+			</div><!--.article-->
+						
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+	
+	<div id="paginacion">
+		<ul>
+			<li><a href="index.html">1</a></li>
+			<li><a href="pag2.html" class="actual">2</a></li>
+			<li><a href="pag3.html">3</a></li>
+			<li><a href="pag4.html">4</a></li>
+			<li><a href="pag5.html">5</a></li>				
+		</ul>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Textos</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Formatear texto con CSS</h1>
+			<blockquote><p>Formatear texto nos permite definir jerarquías, contrastes y pesos entre otras propiedades. El objetivo es facilitar la comprensión de nuestros contenidos.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>La propiedad "Font"</h2>
+				<p>En CSS, las características relacionadas a las fuentes son manipuladas a través de un grupo de propiedades de fuente.</p>
+				<h3>Importante</h3>
+				<p>Trabajar con fuentes en la web tiene algunas dificultades, específicamente dos:</p>
+				<dl>
+					<dt>Familias de fuentes</dt>
+					<dd>Los navegadores disponen de aquellas fuentes que los visitantes a nuestro sitio tienen instaladas en sus computadores. Los desarrolladores no tienen ninguna manera de saber qué fuentes se visualizarán y cuales no.</dd>
+					<dt>Tamaños</dt>
+					<dd>Aunque no muy común, algunos usuarios podrían requerir aumentar o disminuir el tamaño por defecto de los textos en sus navegadores, este valor es inaccesible para los desarrolladores.</dd>
+				</dl>
+				<p>Afortunadamente hay algunas buenas prácticas que podemos utilizar para manejar estas situaciones.</p>
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Especificar el nombre de la fuente - Font-Family</h2>
+				<p>Para definir el tipo de fuente de un texto utilizamos la propiedad <span class="highlight">font-family</span>.</p>
+				<p>El valor de la propiedad corresponderá a la fuente o lista de fuentes a utilizar en el sitio.</p>
+				<h4>Ejemplo</h4>
+				<code>				
+					<span>body {font-family: Arial;}</span>
+					<span>h1 {font-family: Courier, monospace}</span>
+					<span>p {font-family:"Trebuchet MS", Verdana, sans-serif;}</span>
+				</code>
+				<h3>&iquest;Por qué utilizar más de una fuente?</h3>
+				<p>Para superar la limitación de fuentes disponibles (descrita anteriormente), CSS nos permite crear una lista de fuentes y evaluar su disponibilidad.</p>
+				<p>En el ejemplo anterior, la fuente asignada a la etiqueta "p" será "Trebuchet MS", de no estar disponible, intentará con Verdana, si esta tampoco existe, entonces utilizará la fuente "sans-serif" predeterminada del sistema operativo.</p>
+				<h3>Importante</h3>
+				<p>Algunas características de la propiedad font-family:</p>
+				<ul>
+					<li>Todas las fuentes deben ser escritas con la primera letra en mayúscula (a excepción de las genéricas como "serif").</li>
+					<li>Las fuentes cuyos nombres sean compuestos, por ejemplo "Trebuchet MS", deben escribirse entre comillas.</li>
+					<li>Debes incluir comas para separar cada fuente.</li>
+				</ul>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Unidades de medida en CSS</h2>
+				<p>Las unidades de medida en CSS se encuentras bajo dos categorías: <strong>Unidades Absolutas</strong> y <strong>Unidades Relativas</strong>.</p>
+				<h3>Unidades Absolutas</h3>
+				<p>Estas unidades están definidas en el mundo real sus valores nunca variarán a pesar del contexto.</p>
+				<h4>Estas son:</h4>
+				<dl>
+					<dt>Puntos - pt</dt>
+					<dd>1 punto corresponde aproximadamente a 1/28cm.</dd>
+					<dt>Picas - pc</dt>
+					<dd>1 pica corresponde a 12 puntos.</dd>
+					<dt>Milímetros - mm</dt>
+					<dd></dd>
+					<dt>Centímetros - cm</dt>
+					<dd></dd>
+					<dt>Pulgadas - in</dt>
+					<dd></dd>
+				</dl>
+				<p>Las unidades absolutas no son recomendadas para la web. Sin embargo, si creamos una hoja de estilos para impresión, podríamos utilizar estas medidas para asegurarnos su correcta visualización en un medio impreso.</p>
+				
+				<h3>Unidades Relativas</h3>
+				<p>Como indica su nombre las unidades relativas varían su tamaño en relación a algo, por ejemplo, a la resolución de una pantalla, al tamaño por defecto de un texto o al tamaño de un elemento contenedor (padre).</p>
+				<h4>Importante</h4>
+				<p>La mayoría de los navegadores fijan el tamaño por defecto de las fuentes en 16px.</p>
+				<h4>Las medidas más utilizadas son:</h4>
+				<dl>
+					<dt>em</dt>
+					<dd>1em corresponde al tamaño por defecto del navegador.</dd>
+					<dt>px</dt>
+					<dd>El tamaño de un un pixel dependerá de la resolución del monitor.</dd>
+					<dt>%</dt>
+					<dd>Los porcentajes pueden utilizarse para definir medidas.</dd>
+				</dl>
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Especificar el tamaño de la fuente - Font-Size</h2>
+				<p>Para definir el tamaño de fuente utilizamos la propiedad <span class="highlight">font-size</span>.</p>
+				<p>Podemos especificar el tamaño de un texto de distintas maneras.</p>
+				<h3>A través de unidades de medida</h3>
+				<code>				
+					<span>h1 {font-size: 1.5em}</span>
+				</code>
+				<p>Es importante notar que el "keyword" em <strong>debe ir seguir inmediatamente después del número, sin espacios</strong>.</p>
+				<h3>Como un porcentaje</h3>
+				<code>				
+					<span>p{ font-size: 0.75% }</span>
+				</code>
+				<p>Un valor en porcentaje es relativo al valor por defecto del navegador o al valor heredado del elemento contenedor</p>
+				<h3>Keywords absolutas</h3>
+				<code>
+					<span>h2{font-size: x-large;}
+				</code>
+				<p>Los keyword absolutos son:</p>
+				<ul>
+					<li>xx-small</li>
+					<li>x-small</li>
+					<li>small</li>
+					<li>medium</li>
+					<li>large</li>
+					<li>x-large</li>
+					<li>xx-large</li>
+				</ul>
+				<p>El valor por defecto del navegador en estos términos es "medium".</p>
+				<h3>Keyword relativo</h3>
+				<p>Los keyword relativos aumentan o disminuyen el tamaño del texto cercano</p>
+				<code>
+					<span>h2{font-size: larger;}
+				</code>
+				<p>Los keyword relativos son:</p>
+				<ul>
+					<li>larger</li>
+					<li>smaller</li>
+				</ul>
+				
+				<h4>Importante</h4>
+				<p>Es recomendado trabajar principalmente en valores relativos como em, px y %.</p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Peso de la fuente - Font-weight</h2>
+				<p>Definir si el texto aparece en "bold", para esto utilizamos la propiedad <span class="highlight">font-weight</span>.</p>
+				<code>
+					<span>h1 {font-weight: bold;}</span>
+				</code>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Estilo de la fuente - Font-style</h2>
+				<p>El valor de la propiedad <span class="highlight">font-style</span> define la postura de la fuente.</p>
+				<code>
+					<span>em{font-style: italics}</span>
+				</code>
+				<h4>Otros valores aceptados</h4>
+				<ul>
+					<li>normal</li>
+					<li>italic</li>
+					<li>oblique</li>
+					<li>inherit</li>
+				</ul>
+			</div><!--.article-->
+			
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+	
+	<div id="paginacion">
+		<ul>
+			<li><a href="#" class="actual">1</a></li>
+			<li><a href="pag2.html">2</a></li>						
+		</ul>
+	</div>
+
+</body>
+</html>

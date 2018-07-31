@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Posicionar Elementos</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Posicionar elementos</h1>
+			<blockquote><p>Para crear interfases o layouts de sitios web podemos mover y disponer elementos a través de CSS.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Propiedad Clear</h2>
+				<p>La propiedad <span class="highlight">clear</span> permite a los elementos retomar el flujo normal del documento y evita que éstos rodeen los elementos flotados.</p>
+				<h3>Ejemplo</h3>
+				<code>
+					&lt;h3&gt; Titulo &lt;/h3&gt;<br />
+		            &lt;img src="img/float.jpg" class="alinear-izquierda" /&gt;<br />
+		            &lt;p&gt;Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.&lt;/p&gt;<br /><br />
+		            &lt;h3&gt; Titulo &lt;/h3&gt;<br />
+		            &lt;img src="img/float.jpg" class="alinear-izquierda" /&gt;<br />
+		            &lt;p&gt;Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.&lt;/p&gt;<br /><br />
+		            &lt;h3&gt; Titulo &lt;/h3&gt;<br />
+		            &lt;img src="img/float.jpg" class="alinear-izquierda" /&gt;<br />
+		            &lt;p&gt;Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.&lt;/p&gt;
+					
+				</code>
+				<p>Este código luce así:</p>
+				<code class="parrafo-clear">
+					
+					<h3> Titulo </h3>
+		            <img src="img/float.jpg" class="float-left" />
+		            <p>Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+		            <h3> Titulo </h3>
+		            <img src="img/float.jpg" class="float-left" />
+		            <p>Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+		            <h3> Titulo </h3>
+		            <img src="img/float.jpg" class="float-left" />
+		            <p>Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+					
+				</code>
+				<div class="clear"></div>
+				<h3>Descripción</h3>
+				<p>El contenido anterior flota las imágenes a la izquierda mientras que los párrafos permanecen en el flujo normal del documento.</p>
+				<p>Las imágenes flotadas se ubican a la izquierda respecto a su posición natural, los párrafos intentarán rodear las imágenes lo cual fuerza a los títulos a "subir" y a su vez, rodear la imagen.</p>
+				<p>Para evitar este comportamiento podemos utilizar la propiedad <span class="highlight">clear</span> de manera de forzar a los elementos posteriores a retomar el flujo de la página.</p>
+				<p>Los bordes aplicados a los párrafos son solamente descriptivos.</p>
+				<p>Podemos aplicar la propiedad de dos maneras:</p>
+				<h4>Aplicar clear en un elemento invisible.</h4>
+				<p>Una solución es incluir un "div" invisible al cual le aplicamos la propiedad "clear"</p>
+				<code>
+					&lt;h3&gt; Titulo &lt;/h3&gt;<br />
+		            &lt;img src="img/float.jpg" class="alinear-izquierda" /&gt;<br />
+		            &lt;p&gt;Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.&lt;/p&gt;<br />
+		            <span>&lt;div class="limpiar"&gt;&lt;/div&gt;</span>
+		            &lt;h3&gt; Titulo &lt;/h3&gt;<br />
+		            &lt;img src="img/float.jpg" class="alinear-izquierda" /&gt;<br />
+		            &lt;p&gt;Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.&lt;/p&gt;<br />
+		            <span>&lt;div class="limpiar"&gt;&lt;/div&gt;</span>
+		            &lt;h3&gt; Titulo &lt;/h3&gt;<br />
+		            &lt;img src="img/float.jpg" class="alinear-izquierda" /&gt;<br />
+		            &lt;p&gt;Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.&lt;/p&gt;
+		            <span>&lt;div class="limpiar"&gt;&lt;/div&gt;</span>
+				</code>
+				<p>La class "limpiar" la definimos:</p>
+				<code>
+					<span>.limpiar{</span>
+						<span class="indentx1">clear:left;</span>
+					<span>}</span>
+				</code>
+				<h4>Aplicar clear a un elemento específico.</h4>
+				<p>Según la estructura de nuestro documento, podemos aplicar la propiedad clear a un elemento específico que tenga la función de limpiar el flujo. En nuestro ejemplo, podemos usar las etiquetas h3</p>
+				<code>
+					<span>h3{</span>
+						<span class="indentx1">clear:left;</span>
+					<span>}</span>
+				</code>
+				<p>Es importante señalar que el último artículo de nuestro ejemplo no tiene un h3 que le suceda, esto podría causar que otros elementos "suban" y rodeen la imagen flotada a la izquierda de éste.</p>
+				<p>Para evitar esto entonces, debemos agregar igualmente un "div" oculto que limpie bajo el último elemento.</p>
+				<p>El resultado será en ambos casos será:</p>
+				<code>
+					
+					<h3> Titulo </h3>
+		            <img src="img/float.jpg" class="float-left" />
+		            <p>Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+		            <div class="clear"></div>
+		            <h3> Titulo </h3>
+		            <img src="img/float.jpg" class="float-left" />
+		            <p>Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+		            <div class="clear"></div>
+		            <h3> Titulo </h3>
+		            <img src="img/float.jpg" class="float-left" />
+		            <p>Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+					<div class="clear"></div>
+				</code>
+				<h3>Descripción</h3>
+				<p>La propiedad clear acepta los siguientes parámetros:</p>
+				<dl>
+					<dt>left</dt>
+					<dd>El elemento al que se le aplique la propiedad se ubicará bajo el último elemento flotado a la izquierda dentro del mismo contenedor.</dd>
+					<dt>right</dt>
+					<dd>El elemento al que se le aplique la propiedad se ubicará bajo el último elemento flotado a la derecha dentro del mismo contenedor.</dd>
+					<dt>both</dt>
+					<dd>El elemento al que se le aplique la propiedad se ubicará bajo el último elemento flotado dentro del mismo contenedor.</dd>
+				</dl>
+				
+				
+			</div><!--.article-->
+								
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+	
+	<div id="paginacion">
+		<p>Continúa a la siguiente página</p>
+		<ul>
+			<li><a href="#">1</a></li>
+			<li><a href="pag2.html" >2</a></li>
+			<li><a href="pag3.html"class="actual">3</a></li>
+			<li><a href="pag4.html">4</a></li>				
+		</ul>
+	</div>
+
+</body>
+</html>

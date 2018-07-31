@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Posicionar Elementos</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Posicionar elementos</h1>
+			<blockquote><p>Para crear interfases o layouts de sitios web podemos mover y disponer elementos a través de CSS.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+				
+				<h2>Propiedad Position</h2>
+				<p>Además de utilizar la propiedad float para estructurar elementos en CSS, podemos utilizar la propiedad <span class="highlight">position</span> para lograr mayor precisi&oacute;n al posicionar algunos elementos.</p>
+				<p>Recordemos que todos los elementos aparecen ubicados en el flujo de la p&aacute;gina. A trav&eacute;s de la propiedad position, podemos modificar esta posici&oacute;n y romper con estructuras m&aacute;s tradicionales.</p>
+				<p>Antes de comenzar, veamos los valores que puede adoptar la propiedad position:</p>
+	            <dl>
+	            	<dt>Posici&oacute;n Est&aacute;tica:</dt>
+	                <dd>Es la posición por defecto que aplica el navegador a las cajas. Simplemente lo ubica luego del elemento hermano anterior dentro de su contenedor al crear el flujo de la p&aacute;gina.
+	                <a href="ejemplos/ejemplo01.html" class="boton">Ejemplo</a>
+	                </dd>
+	                <dt>Posici&oacute;n Relativa:</dt>
+	                <dd>Un elemento con posici&oacute;n relativa, se ubicara <span class="destacar">relativo a su posici&oacute;n natural (posici&oacute;n est&aacute;tica).</span>
+	                <a href="ejemplos/ejemplo02.html" class="boton">Ejemplo</a>
+	                </dd>
+	                
+	                <dt>Posici&oacute;n Absoluta:</dt>
+	                <dd>Ahora logramos mayor control, la posici&oacute;n absoluta nos permite determinar d&oacute;nde se ubicar&aacute; un <span class="destacar">punto de referencia del elemento en relaci&oacute;n con el contenedor m&aacute;s cercano cuya posicion sea relative.</span> Cuando la p&aacute;gina sea navegada, el elemento mantendr&aacute; su posici&oacute;n.
+	                <a href="ejemplos/ejemplo03.html" class="boton">Ejemplo</a>
+	                </dd>
+	                
+	                <dt>Posici&oacute;n Fija:</dt>
+	                <dd>Todav&iacute;a m&aacute;s control. La posici&oacute;n de un elemento fijo, <span class="destacar">siempre es relativa a la ventana del navegador</span>.
+	                <a href="ejemplos/ejemplo04.html" class="boton">Ejemplo</a>
+	                </dd>
+	                
+				</dl>
+				<p>La propiedad position debe ir de la mano con otra propiedad que define cu&aacute;l ser&aacute; su posici&oacute;n, ayuda a definir el punto de referencia desde d&oacute;nde ubicar la caja, estas son:</p>
+            
+	            <ul>
+					<li>top</li>
+	                <li>left</li>
+	                <li>bottom</li>
+	                <li>right</li>
+				</ul>
+            
+            <p>El valor de estas propiedades <span class="destacar">siempre dependerá del valor de la propiedad position.</p>
+				
+			</div><!--.article-->
+								
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+	
+	<div id="paginacion">
+		<p>Continúa a la siguiente página</p>
+		<ul>
+			<li><a href="#">1</a></li>
+			<li><a href="pag2.html" >2</a></li>
+			<li><a href="pag3.html"class="actual">3</a></li>
+			<li><a href="pag4.html">4</a></li>				
+		</ul>
+	</div>
+
+</body>
+</html>

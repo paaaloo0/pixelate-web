@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>HTML5 - Estrcutura y Doctype</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Estructura y Doctype</h1>
+			<blockquote><p>Toda la estructura básica de un sitio en HTML5 fue simplificada y asegura compatibilidad con código existente.</p></blockquote>
+			<p>La motivación tras esta nueva tecnología es enfocada al usuario, esto significa que en caso de conflictos es prioridad que el visitante acceda al contenidos sobre la pureza del código implementado por los desarrolladores.</p>
+			<p>Entre otros, esta filosofía permite a los desarrolladores crear código de una manera más libre y a los navegadores responder de mejor manera a errores que anteriormente "rompían" la página.</p>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Doctype</h2>
+				<p>En versiones anteriores a HTML5 la estructura del Doctype era compleja y difería según el tipo de documentos sobre el cuál quicieramos trabajar.</p>
+				<h4>Doctype para HTML 4.1</h4>
+				<code>
+					<span>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span>
+				</code>
+				<h4>Doctype para XHTML 1.0</h4>
+				<code>
+					<span>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</span>
+				</code>
+				<p>Ambas declaraciones logran el mismo objetivo a grades rasgos: decirle al navegador que el documento está escrito en HTML4.1, XHTML1.0 u otro</p>
+				<p>En HTML5 en tanto, la declaración del Doctype es:</p>
+				<code>
+					<span>&lt;!DOCTYPE html&gt;</span>
+				</code>
+				<p>Así de simple</p>
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Codificación de caracteres</h2>
+				<p>Para asegurarse que el servidor envíe el correcto set de caracteres del sitio, podemos utilizar la etiqueta <span class="highlight">meta</span>. En versiones anteriores a HTML5, esta tarea se lograba así:</p>
+				<code>
+					<span>&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;</span>
+				</code>
+				<p>En HTML5 la simplificación resulta en:</p>
+				<code>
+					<span>&lt;meta charset="UTF-8">"&gt;</span>
+				</code>
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Estructura básica</h2>
+				<p>De esta manera la estructura básica de un documento HTML5 lucirá así:</p>
+				<code>
+					<span>&lt;!doctype html&gt;</span>
+					<span>&lt;html lang="en"&gt;</span>
+						<span class="indentx1">&lt;head&gt;</span>
+							<span class="indentx2">&lt;meta charset="utf-8"&gt;</span>
+							<span class="indentx2">&lt;title&gt;Título de mi página&lt;/title&gt;</span>
+							<span class="indentx2">&lt;link rel="stylesheet" href="style.css" /&gt;</span>
+						<span class="indentx1">&lt;/head&gt;</span>
+							<span class="indentx2">&nbsp;</span>
+						<span class="indentx1">&lt;body&gt;</span>
+							<span class="indentx2">&nbsp;</span>
+						<span class="indentx1">&lt;/body&gt;</span>
+					<span>&lt;/html&gt;</span>
+					
+				</code>
+				
+			</div><!--.article-->
+			
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title> HTML - Listas</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+	
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Listas en HTML</h1>
+			<blockquote><p>Las listas crean items de informaci&oacute;n.</p></blockquote>
+			<p>Existen 3 tipos de listas en HTML:</p>
+			<ul>
+				<li>Listas desornedadas</li>
+				<li>Listas ordenadas</li>
+				<li>Listas de definici&oacute;n</li>
+			</ul>
+		</div>
+		
+		<div id="content">
+		
+			<div class="article">
+				<h2>Listas desordenadas</h2>
+				<p>Es el tipo de lista m&aacute;s utilizada ya que nos permiten crear diferentes tipos de componentes de un sitio, tales como navegaci&oacute;n, categor&iacute;as y mucho m&aacute;s.</p>
+				
+				<h3>Creaci&oacute;n de una lista desordenada</h3>
+				<p>Una lista desordenada consta de dos etiquetas:</p>
+				<dl>
+					<dt>Etiqueta &lt;ul&gt;</dt>
+					<dd>Esta etiqueta de apertura y de cierre compone nuestra lista, el navegador entender&aacute; que todos los elementos contenidos dentro de este bloque corresponde a una lista desordenada.
+					<dt>Etiqueta &lt;li&gt;</dt>
+					<dd>Esta etiqueta de apertura y de cierre <strong>debe</strong> envolver cada elemento que pertenezca a la lista.</dd>
+				</dl>
+				<h4>Ejemplo</h4>
+				<code>
+					<span>&lt;ul&gt;</span>
+					<span class="indentx1">&lt;li&gt;Chile&lt;/li&gt;</span>
+					<span class="indentx1">&lt;li&gt;Argentina&lt;/li&gt;</span>
+					<span class="indentx1">&lt;li&gt;Peru&lt;/li&gt;</span>
+					<span class="indentx1">&lt;li&gt;Bolivia&lt;/li&gt;</span>
+					<span>&lt;/ul&gt;</span>
+				</code>
+				<p>Este c&oacute;digo se transformar&aacute; en:</p>
+				<ul>
+					<li>Chile</li>
+					<li>Argentina</li>
+					<li>Peru</li>
+					<li>Bolivia</li>
+				</ul>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Listas ordenadas</h2>
+				<p>La lista ordenada representa una serie de elementos que ocurren de manera cronol&oacute;gica o elementos ordenados de manera jer&aacute;rquica.</p>
+				
+				<h3>Creaci&oacute;n de una lista ordenada</h3>
+				<p>Una lista ordenada se construye de la misma manera que una lista desordenada, con la diferencia que en vez de la etiqueta &lt;ul&gt;, debe utilizarse la etiqueta &lt;ol&gt;.</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<span>&lt;ol&gt;</span>
+						<span  class="indentx1">&lt;li&gt;Argentina&lt;/li&gt;</span>
+						<span  class="indentx1">&lt;li&gt;Chile&lt;/li&gt;</span>
+						<span  class="indentx1">&lt;li&gt;Ecuador&lt;/li&gt;</span>
+						<span  class="indentx1">&lt;li&gt;Uruguay&lt;/li&gt;</span>
+					<span>&lt;/ol&gt;</span>
+				</code>
+				<p>Este c&oacute;digo se transformar&aacute; en:</p>
+				<ol>
+					<li>Argentina</li>
+					<li>Chile</li>
+					<li>Ecuador</li>
+					<li>Uruguay</li>
+				</ol>
+				<p>La etiqueta &lt;ul&gt; puede contener el atributo "start" que define el n&uacute;mero inicial de la lista.</p>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Listas de definici&oacute;n</h2>
+				<p>La lista ordenada representa una serie de elementos que ocurren de manera cronol&oacute;gica o elementos ordenados de manera jer&aacute;rquica.</p>
+				
+				<h3>Creaci&oacute;n de una lista ordenada</h3>
+				<p>Las listas de definici&oacute;n crean una lista compuesta de un t&eacute;rmino y su definici&'oacute;n. Es similar a un diccionario.</p>
+				<p>Estas listas est&aacute;n compuestas de 3 etiquetas: &lt;dl&gt;(Definici&oacute;n de la lista), &lt;dt&gt;(T&eacute;rmino a definir) y &lt;dd&gt;(Definici&oacute;n).
+				<h4>Ejemplo</h4>
+				<code>
+					<span>&lt;dl&gt;</span>
+						<span class="indentx1">&lt;dt&gt;Richard Grayson&lt;/dt&gt;</span>
+			            <span class="indentx1">&lt;dd&gt;</span>
+			            <span class="indentx2">Richard "Dick" Grayson es un personaje dentro del Universo DC. Fue conocido por ser el primer Robin.&lt;/dd&gt;</span>
+			            <span class="indentx1">&lt;dt&gt;Tim Drake&lt;/dt&gt;</span>
+			            <span class="indentx2">&lt;dd&gt;Timothy "Tim" Jackson Drake was known as Robin in the Batman comics, becoming the third character to take up the identity. &lt;/dd&gt;</span>
+			            <span class="indentx1">&lt;dt&gt;Jason Todd&lt;/dt&gt;</span>
+			            <span class="indentx2">&lt;dd&gt;Jason Todd es un personaje de DC Comics creado en 1983 y conocido como "el segundo Robin". El personaje era el reemplazo de Dick Grayson (Robin original) como aliado de Batman, ya que Grayson había crecido y se había convertido en el héroe Nightwing.</span>
+			            <span class="indentx1">&lt;/dd&gt;</span>
+			           <span class="indentx1"> &lt;dt&gt;Barbara Gordon&lt;/dt&gt;</span>
+			           <span class="indentx1"> &lt;dd&gt;</span>
+			            <span class="indentx2">Barbara Gordon es un personaje de DC Comics, se une a Batman y a Robin para luchar contra el crimen usando el apodo de Batgirl. Posteriormente ha adoptado el rol de Oráculo (Oracle en la versión original en inglés).</span>
+			           <span class="indentx1"> &lt;/dd&gt;</span>
+					<span>&lt;/dl&gt;
+				</code>
+				<p>Este c&oacute;digo se transformar&aacute; en:</p>
+				<dl>
+		               
+		            <dt>Richard Grayson</dt>
+		            <dd>Richard "Dick" Grayson es un personaje dentro del Universo DC. Fue conocido por ser el primer Robin.</dd>
+		            
+		            <dt>Tim Drake</dt>
+		            <dd>imothy "Tim" Jackson Drake was known as Robin in the Batman comics, becoming the third character to take up the identity.</dd>
+		            
+		            <dt>Jason Todd</dt>
+		            <dd>Jason Todd es un personaje de DC Comics creado en 1983 y conocido como "el segundo Robin". El personaje era el reemplazo de Dick Grayson (Robin original) como aliado de Batman, ya que Grayson había crecido y se había convertido en el héroe Nightwing.
+		            </dd>
+		            
+		            <dt>Barbara Gordon</dt>
+		            <dd>Barbara Gordon es un personaje de DC Comics, se une a Batman y a Robin para luchar contra el crimen usando el apodo de Batgirl. Posteriormente ha adoptado el rol de Oráculo (Oracle en la versión original en inglés).
+		            </dd>
+		
+				</dl>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Importante</h2>
+				<ul>
+					<li>Las listas y las etiqueta asociadas son elementos en bloque.</li>
+					<li>Los elementos &lt;li&gt; y &lt;dd&gt;pueden contener cualquier tipo de elemento u otras etiquetas HTML.</li>
+					<li>Los elementos &lt;dt&gt; no pueden contener otros elementos HTML.</li>
+				</ul>
+			</div>
+		
+		</div>
+    
+</body>
+</html>

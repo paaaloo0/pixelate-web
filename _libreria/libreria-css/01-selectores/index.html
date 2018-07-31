@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Selectores</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Selectores</h1>
+			<blockquote><p>Los selectores nos permiten identificar elementos HTML y aplicarles estilos y reglas en CSS.</p></blockquote>
+			<p>Existen tres tipos de selectores en CSS, de etiquetas, de atributo ID y de atributo Class.</p>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Selector de Etiquetas</h2>
+				<p>Cada etiqueta en HTML puede ser seleccionada por su nombre a través de CSS.</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<span>html {}: Selecciona el elemento HTML del documento.</span>
+					<span>body {}: Selecciona el elemento body del documento.</span>
+					<span>p {}: Selecciona <strong>todos</strong> los elementos p del sitio.</span>
+					<span>a {}: Selecciona <strong>todos</strong> los elementos a del sitio.</span>
+				</code>
+				
+				<p>Podemos especificar un poco más nuestros selectores agregando elementos a éste:</p>
+				<code>
+					<span>p a{}: Selecciona todos los elementos "a" que estén contenidos dentro de un elemento "p".</span>
+					<span>ul li{}: Selecciona todos los elementos li que estén contenidos dentro de un elemento "ul"</span>
+				</code>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>ID</h2>
+				<p>ID es un atributo de HTML que podemos aplicar a nuestras etiquetas.</p>
+				<p>La característica principal de éste es que es único, por lo tanto, ningún otro elemento en el documento puede tener el mismo ID</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<span><strong>HTML</strong></span>			
+					<span>&lt;div id="contenedor"&gt;</span>
+				</code>
+				<p>Para seleccionar este elemento en CSS utilizamos el caracter '#' seguido del valor del ID:</p>
+				<code>
+					<span><strong>CSS</strong></span>	
+					<span>#contendedor{};</span>
+				</code>
+				<p>Ahora, todas las reglas que apliquemos a este elemento sólo tendrán efecto en el elemento div cuyo ID sea "contenedor"</p>
+				<h4>Mezclar ID con etiquetas en CSS</h4>
+				<p>Podemos crear selectores más avanzados mezclando selectores, por ejemplo:</p>
+				<code>
+					<span>#contenedor p{}: Esta regla selecciona todos los elementos "p" que estén contenidos dentro del elemento cuyo ID sea "contenedor"</span>
+				</code>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Class</h2>
+				<p>Al igual que ID, Class es un atributo de HTML que podemos aplicar a nuestras etiquetas.</p>
+				<p>A diferencia que el elemento anterior, el atributo class lo podemos aplicar a tantos elementos como queramos, es decir, podemos reutilizar nuestras classes.</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<span><strong>HTML</strong></span>			
+					<span>&lt;h1 class="titulo"&gt;</span>
+				</code>
+				<p>Para seleccionar este elemento en CSS utilizamos el punto (.) seguido del valor de la class:</p>
+				<code>
+					<span><strong>CSS</strong></span>	
+					<span>.titulo{};</span>
+				</code>
+				<p>Ahora, todas las reglas que apliquemos a este elemento sólo tendrán efecto en aquellos elementos (cualquiera que sea) cuyo valor para el atributo class sea "titulo"</p>
+				<h4>Mezclar class con etiquetas en CSS</h4>
+				<p>Podemos crear selectores más avanzados mezclando selectores, por ejemplo:</p>
+				<code>
+					<span>.titulo a{}: Esta regla selecciona todos los elementos "a" que estén contenidos dentro del elemento cuya class sea "titulo"</span>
+				</code>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Anidar selectores</h2>
+				<p>Anidar selectores nos permite seleccionar descendientes de un elemento en un mismo selector.</p>
+				<h4>Ejemplo 1</h4>			
+				<code>
+					<span><strong>HTML</strong></span>
+					<span>&lt;ul&gt;</span>
+					<span class="indentx1">&lt;li&gt;Chile&lt;/li&gt;</span>
+					<span class="indentx1">&lt;li&gt;Argentina&lt;/li&gt;</span>
+					<span>&lt;/ul&gt;</span>
+				</code>
+				<p>Para seleccionar los elementos li dentro de esta lista, podemos utilizar></p>
+				<code>
+					<span><strong>CSS</strong></span>	
+					<span>ul li{};</span>
+				</code>
+				<h4>Ejemplo 2</h4>
+				<code>
+					<span><strong>HTML</strong></span>
+					<span>&lt;ul&gt;</span>
+					<span class="indentx1">&lt;li&gt;Chile</span>
+						<span class="indentx2">&lt;ul&gt;</span>
+							<span class="indentx3">&lt;li&gt;Santiago&lt;/li&gt;</span>
+							<span class="indentx3">&lt;li&gt;Valparaiso&lt;/li&gt;</span>
+						<span class="indentx2">&lt;/ul&gt;</span>
+					<span class="indentx1">&lt;/li&gt;</span>
+					<span class="indentx1">&lt;li&gt;Argentina&lt;/li&gt;</span>
+					<span>&lt;/ul&gt;</span>
+				</code>
+				<p>Para seleccionar todos los elementos li de segundo nivel utilizamos:</p>
+				<code>
+					<span><strong>CSS</strong></span>	
+					<span>ul li ul li{};</span>
+				</code>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Agrupar selectores</h2>
+				<p>Agrupar selectores nos permite aplicar las mismas reglas CSS a un grupo de elemento CSS.</p>
+				<h4>Ejemplo</h4>			
+				<code>
+					<span><strong>CSS</strong></span>	
+					<span>p, a, ul li {};</span>
+				</code>
+				<p>Los selectores separados por una coma (,) indican agrupación y la regla definida se aplicará a todos los elementos "p", "a" y "ul li" del documento</p>
+				
+			</div><!--.article-->
+			
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+
+</body>
+</html>

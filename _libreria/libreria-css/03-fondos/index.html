@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Fondos</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Fondos en CSS</h1>
+			<blockquote><p>Con CSS podemos aplicar color de frente y de fondo a todas las cajas de nuestro sitio.</p></blockquote>
+			<p>El color de frente lo revisamos, es la propiedad "color" y lo utilizamos para dar color a los textos. El color de fondo se lo aplicamos a la caja misma a través de la propiedad background.</p>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Color de Fondo - background-color</h2>
+				<p>La propiedad <span class="highlight">background-color</span> nos sirve para agregar un color de fondo a nuestro elemento.</p>
+				<p>Podemos agregar esta propiedad a cualquier elemento y el color se aplicará a todo el fondo incluyendo el margen interno (padding) y el borde.</p>
+				<h4>Ejemplo</h4>
+				<code>				
+					<span>blockquote {background-color: #b4dbe6;}</span>
+				</code>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Imagen de Fondo - background-image</h2>
+				<p>La propiedad <span class="highlight">background-image</span> permite agregar una imagen como fondo de una caja, esta propiedad puede convivir con el color. </p>
+				<h4>Ejemplo</h4>
+				<code>				
+					<span>body { background-image: url(mi_imagen.png); }</span>
+				</code>
+				<p>La propiedad "background-imagen" tiene algunas características que se aplican por defecto, estas son:</p>
+				<ul>
+					<li>Su punto de registro está ubicado en la esquina superior izquierda.</li>
+					<li>Su posición inicial siempre será la esquina superior izquierda del elemento.</li>
+					<li>La imagen utilizará un estilo mosaico para llenar el ancho y alto del elemento, esto es, se repetirá infinitamente en el eje-x y en el eje-y para cubrir totalmente el fondo (incluso si la imagen es más grande que el contenedor, está se considerará repetida hacia ambas direcciones).</li>
+					<li>Si se aplica color de fondo e imagen de fondo, esta ultima se ubicará sobre la primera.</li>
+				</ul>
+				<p>Para modificar estos valores por defecto, existe una serie de propiedades relacionadas a "background-image":</p>
+				<ul>
+					<li>background-repeat</li>
+					<li>background-position</li>
+					<li>background-attachment</li>
+					<li>background</li>
+				</ul>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Repetición del fondo - background-repeat</h2>
+				<p>Como mencionamos anteriormente, si no agregamos esta propiedad la imagen se repetirá infinitamente en ambos ejes, para controlar este comportamiento utilizamos la regla <span class="highlight">background-repeat</span></p>
+				<h4>Ejemplo</h4>
+				<code>				
+					<span>body { background-repeat: repeat; } - Valor por defecto</span>
+					<span>body { background-repeat: repeat-x; } - Repetir solo en el eje X</span>
+					<span>body { background-repeat: repeat-y; } - Repetir solo en el eje Y</span>
+					<span>body { background-repeat: no-repeat; } - No repetir</span>
+				</code>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Posición de la imagen de fondo - background-position</h2>
+				<p>El atributo <span class="highlight">background-position</span> define la posición del origen de la imagen.</p>
+				<p>La posición de una imagen está determinada por su ubicación horizontal y vertical, podemos asignar éstas a través de:</p>
+				<ul>
+					<li>Unidades de medida</li>
+					<li>Porcentajes</li>
+					<li>Keywords</li>
+				</ul>
+				<h4>Unidades de medida</h4>
+				<code>				
+					<span>body { background-position: 200px 50px;}</span>
+				</code>
+				<p>En este caso asignamos las distancias del origen en ambos ejes. <strong>Siempre el valor horizontal va primero</strong>. Es decir, la imagen nacerá 200px a la derecha del origen y 50px hacia abajo. <em>nota: Los valores también pueden ser negativos.</em></p>
+				
+				<h4>Porcentajes</h4>
+				<code>				
+					<span>body { background-position: 20% 100%;}</span>
+					<span>body { background-position: 25%;}</span>
+				</code>
+				<p>En el caso del porcentaje los valores se aplican tanto al fondo como a la imagen, es decir, si aplicamos 100% al eje vertical (como en el ejemplo) la parte inferior de la imagen, calzará con la parte inferior del elemento contenedor.</em></p>
+				<p>Si sólo aplicamos un valor, el navegador asumirá que el faltante corresponde a 50%.</p>
+				<p>Al igual que en el ejemplo anterior, <strong>el valor horizontal va primero</strong>.</p>
+				
+				<h4>Keyword</h4>
+				<p>Podemos utilizar seis palabras claves:</p>
+				<ul>
+					<li>left</li>
+					<li>center</li>
+					<li>right</li>
+					<li>top</li>
+					<li>bottom</li>
+					<li>center</li>
+				</ul>
+				<p>Los tres primeros se utilizan para el eje horizontal y los tres últimos para el eje vertical (Por eso la repetición del valor "center").</p>
+				<code>				
+					<span>body { background-position: left bottom;}</span>
+					<span>body { background-position: right center;}</span>
+					<span>body { background-position: right;}</span>
+				</code>
+				<p>Si sólo aplicamos un valor, el navegador asumirá que el faltante corresponde a "center".</p>
+				<p>Al igual que en los ejemplos anteriores, <strong>el valor horizontal va primero</strong>.</p>
+				
+				<h3>Importante</h3>
+				<p>CSS nos da la opción de mezclar los valores del atributo "background-position".</p>
+				<h4>Ejemplo</h4>
+				<code>
+					<span>p {background-position:center 300px;}</span>
+				</code>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Sujeción del fondo - background-attachment</h2>
+				<p>El atributo <span class="highlight">background-attachment</span> podemos definir el estado de la imagen de fondo con respecto al resto del documento.</p>
+				<p>Por defecto, si ponemos una imagen de fondo, esta se moverá con el resto del contenido si movemos la barra de scroll del navegador, a través de CSS podemos modificar este comportamiento para que ésta quede fija en su posición.</p>
+				<code>				
+					<span>body { background-attachment: scroll; }</span>
+					<span>body { background-attachment: fixed; }</span>
+					<span>body { background-attachment: inherit; }</span>
+				</code>
+				<h4>Descripción</h4>
+				<ul>
+					<li><strong>scroll</strong> es el valor por defecto e indica que la imagen se mueve con el resto del documento.</li>
+					<li><strong>fixed</strong> la posición se mantiene en su posición en relación al área visible del navegador.</li>
+					<li><strong>inherit</strong> indica que la imagen heredará este valor de su ancestro.</li>
+				</ul>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Atajo background</h2>
+				<p>El atributo <span class="highlight">background</span> permite resumir todas las propiedades del fondo a una sola linea.</p>
+				<p>Así, la siguiente regla:</p>
+				<code>
+					<span>
+					<pre>
+body {
+	background-color: 0xff0000;
+	background-image: url(mi_imagen.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-attachment: fixed;
+}
+					</pre>
+					</span>
+				</code>
+				
+				<p>Puede resumirse utilizando la siguiente forma:</p>
+				<code><span>
+body{
+	background: 0xff0000 url(mi_imagen.png) no-repeat left top fixed;
+}
+				</span></code>
+				<h4>Descripción</h4>
+				<p>El atajo está compuesto por: </p>
+				<ul>
+					<li>background-color</li>
+					<li>background-image</li>
+					<li>background-repeat</li>
+					<li>background-position</li>
+					<li>background-attachment</li>
+				</ul>
+				<h3>Importante</h3>
+				<p>El orden de las propiedades <strong>es muy importante, debe ser mantenido</strong>.</p>
+				
+			</div><!--.article-->
+			
+						
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+
+</body>
+</html>

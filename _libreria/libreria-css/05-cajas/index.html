@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Modelo de Cajas II</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Modelo de Cajas II</h1>
+			<blockquote><p>Todo es una caja. Y además, todos los elementos contienen componentes que podemos modificar con CSS.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>Las cajas</h2>
+				<p>Como vimos anteriormente, los elementos en HTML son basicamente cajas que pueden desplegarse en una de dos maneras: en bloque o en linea.</p>
+				<p>Además de esto, todos los elementos están contienen los componentes descritos en la siguiente figura:</p>
+				<div class="figure">
+					<img src="caja.png" alt="Caja en HTML">
+				</div>
+				<h3>Descripción</h3>
+				<dl>
+					<dt>Área de contenidos</dt>
+					<dd>Espacio que almacena el contenido mismo de la caja, éste puede ser texto, imágenes u otros elementos en HTML.</dd>
+					
+					<dt>Padding</dt>
+					<dd>El padding corresponde al margen interior del elemento. <strong>El padding recibe características del fondo como color o imagen de fondo</strong>.</dd>
+					
+					<dt>Border</dt>
+					<dd>El borde es una linea que rodea al elemento.</dd>
+					
+					<dt>Margin</dt>
+					<dd>El margen es el espacio externo al elemento. <strong>Los márgenes siempre son transparentes</strong>.</dd>
+					
+				</dl>
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Modificar alto y ancho</h2>
+				<p>Podemos utilizar las propiedades <span class="highlight">width</span> y <span class="highlight">height</span> para modificar el ancho y alto de la caja.</p>
+				<p>Es importante recordar que sólo es posible modificar estas propiedades en objetos <strong>en bloque</strong>.</p>
+				<p>De no especificarse el <strong>ancho</strong> de un elemento, este se extenderá a todo el ancho de su elemento contenedor. Su <strong>alto</strong>en tanto, se ajustará al alto del contenido del elemento.</p>
+				<p>Para modificar estos valores utilizamos.</p>
+				<code>
+					<span>p { width:300px; }</span>
+					<span>h2{ height:400px; }</span>
+				</code>
+				<h3>Importante</h3>
+				<p>No olvidar que los valores de alto y ancho <strong>solo</strong> se aplica al área de contenidos de la caja. Si agregamos <em>padding</em>, <em>margin</em> o <em>border</em>, los valores de éstos se sumarán a los valores width y height.</p>
+				
+				
+			</div><!--.article-->
+			
+			<div class="article">
+			
+				<h2>Rebalse de contenidos</h2>
+				<p>Cuando definimos el ancho o alto de un elemento y su contenido excede estas dimensiones puede suceder lo siguiente:</p>
+				<code>
+				<div class="caja-overflow">
+					<p>Cupcake ipsum dolor sit amet caramels. Dragée I love soufflé applicake chocolate cake pastry applicake. I love cheesecake chocolate bar fruitcake. Gingerbread pudding macaroon I love donut carrot cake gummies.</p>
+				</div>
+				<div class="clear"></div>
+				</code>
+				<p>La caja que creamos tiene 150x150px, el texto que contiene no alcanza en este espacio y por tanto se rebalsa.</p>
+				<p>Para modificar este comportamiento disponemos de la propiedad <span class="highlight">overflow</span>. Esta propiedad puede recibir los siguientes valores:</p>
+				<dl>
+					<dt>visible</dt>
+					<dd>El valor por defecto, muestra todo el contenido sin importar si se rebalsa.</dd>
+					
+					<dt>hidden</dt>
+					<dd>Los contenidos no se extienden fuera del contenedor y se cortan abruptamente en caso de superarlo.</dd>
+					
+					<dt>scroll</dt>
+					<dd>El navegador agrega una barra de scroll a la caja contenedora. Con este valor asignado a la caja, la barra siempre será visible.</dd>
+					
+					<dt>auto</dt>
+					<dd>El navegador decide si se requiere una barra de scroll, la mayoría de las veces si el contenido no calza, entonces aparece la mencionada barra.</dd>
+				</dl>
+				<h4>Ejemplos</h4>
+				<code>
+					<div class="caja-overflow">
+						<h5>Display: visible</h5>
+						<p>Cupcake ipsum dolor sit amet caramels. Dragée I love soufflé applicake chocolate cake pastry applicake. I love cheesecake chocolate bar fruitcake. Gingerbread pudding macaroon I love donut carrot cake gummies.</p>
+					</div>
+					
+					<div class="caja-overflow hidden-overflow">
+						<h5>Display: hidden</h5>
+						<p>Cupcake ipsum dolor sit amet caramels. Dragée I love soufflé applicake chocolate cake pastry applicake. I love cheesecake chocolate bar fruitcake. Gingerbread pudding macaroon I love donut carrot cake gummies.</p>
+					</div>
+					
+					<div class="caja-overflow hidden-scroll">
+						<h5>Display: scroll</h5>
+						<p>Cupcake ipsum dolor sit amet caramels. Dragée I love soufflé applicake chocolate cake pastry applicake. I love cheesecake chocolate bar fruitcake. Gingerbread pudding macaroon I love donut carrot cake gummies.</p>
+					</div>
+					
+					<div class="caja-overflow hidden-auto">
+						<h5>Display: auto</h5>
+						<p>Cupcake ipsum dolor sit amet caramels. Dragée I love soufflé applicake chocolate cake pastry applicake. I love cheesecake chocolate bar fruitcake. Gingerbread pudding macaroon I love donut carrot cake gummies.</p>
+					</div>
+					<div class="clear"></div>
+				</code>
+				
+			</div><!--.article-->
+						
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+	
+	<div id="paginacion">
+		<ul>
+			<li><a href="#" class="actual">1</a></li>
+			<li><a href="pag2.html">2</a></li>
+			<li><a href="pag3.html">3</a></li>
+			<li><a href="pag4.html">4</a></li>
+			<li><a href="pag5.html">5</a></li>				
+		</ul>
+	</div>
+
+</body>
+</html>

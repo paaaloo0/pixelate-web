@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Posicionar Elementos</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Posicionar elementos</h1>
+			<blockquote><p>Para crear interfases o layouts de sitios web podemos mover y disponer elementos a través de CSS.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+			
+				<h2>El flujo de un sitio web</h2>
+				<p>El flujo de un sitio web dice relación con cómo los elementos se disponen de manera natural en un sitio.</p>
+				<p>En CSS los elementos se ubican de arriba abajo y de izquierda a derecha en el mismo orden que son ingresados en HTML.</p>
+				<p>Los elementos en bloque se montan uno sobre otro utilizando todo el ancho de su elemento contenedor. Los elementos en linea en tanto, se sitúan uno al lado del otro.</p>
+				<p>Si cambiamos el tamaño de la ventana del navegador, los elementos en bloque se expanden o contraen mientras que los en linea se adaptan al ancho correspondiente.</p>
+				<h3>Ejemplo</h3>
+				<p>Tomemos este código que representa cuatro elementos en bloque.</p>
+				<code>
+					&lt;h1&gt;Este es el título de mi sitio&lt;/h1&gt;<br />
+					&lt;p&gt;Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.&lt;/p&gt;<br />
+					&lt;h2&gt;Este es un subtítulo&lt;/h2&gt;<br />
+					&lt;p&gt;Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.&lt;/p&gt;
+				</code>
+				<p>Este código se visualizaría así:</p>
+				<code id="posicionar-flow">
+					<h1>Este es el título de mi sitio</h1>
+					<p>Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+					<h2>Este es un subtítulo</h2>
+					<p>Cupcake ipsum dolor. Sit amet cake pudding candy canes bear claw tart oat cake. Oat cake brownie sesame snaps cookie fruitcake lemon drops.</p>
+				</code>
+				<p>Vemos que todos los elementos son en bloque por lo tanto ocupan todo el ancho disponible en su contenedor y están uno sobre otro. Los elementos en linea como el texto se ubican lado a lado hasta el límite de su contenedor y luego continúan en la siguiente linea.</p>
+				<h4>Importante</h4>
+				<p>En el flujo natural de una página, los elementos afectan a aquellos que los rodean, este comportamiento evita que éstos se monten uno encima del otro.</p>
+				<p>A través de las propiedades <span class="highlight">float</span> y <span class="highlight">position</span>, podemos cambiar este comportamiento y sacar los elementos del flujo natural.</p>
+				
+			</div><!--.article-->
+									
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+	
+	<div id="paginacion">
+		<p>Continúa a la siguiente página</p>
+		<ul>
+			<li><a href="#" class="actual">1</a></li>
+			<li><a href="pag2.html">2</a></li>
+			<li><a href="pag3.html">3</a></li>
+			<li><a href="pag4.html">4</a></li>				
+		</ul>
+	</div>
+
+</body>
+</html>

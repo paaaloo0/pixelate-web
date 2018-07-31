@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CSS - Anclas y Pseudo-Selectores</title>
+	<link type="text/css" rel="stylesheet" href="../../stylesheet.css"
+    
+</head>
+
+<body>
+	<div id="home-link">
+		<a href="../../index.html" title="Volver al home"><img src="../../img/home.png" alt="Icono home" /></a>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="header">
+			<h1>Anclas y Pseudo-selectores</h1>
+			<blockquote><p>El elemento &lt;a&gt; es uno de los más importantes elementos en HTML y es un elemento en linea que acepta el uso de selectores especiales llamados pseudo-selectores o pseudo-classes.</p></blockquote>
+		</div>
+		
+		<div id="content">
+	
+			<div class="article">
+				<h2>Pseudo-selectores de anclas</h2>
+				<p>Los pseudo-selectores permiten seleccionar elementos de acuerdo a un "estado" o característica especial.</p>
+				<p>Los pseudo selectores tienen el siguiente formato:</p>
+				<code>
+					<span> a:link {...}</span>
+				</code>
+				<p>Notarás que el selector del ancla se crea normalmente pero luego de este se agrega dos puntos ":" y una palabra clave que define el pseudo-selector.</p>
+				<p>Las anclas en HTML permiten el uso de cuatro pseudo-selectores</p>
+				<code>
+					<ul>
+						<dt><span>a:link</span></dt>
+						<dd>Se aplica a los vínculos que no han sido visitados</dd>
+						<dt><span>a:visited</span></dt>
+						<dd>Aplica a los links que ya han sido visitados</dd>
+						<dt><span>a:hover</span></dt>
+						<dd>Aplica cuando el puntero del mouse está sobre el link</dd>
+						<dt><span>a:active</span></dt>
+						<dd>Se aplica cuando el botón del mouse está presionado sobre el link</dd>
+					</ul>
+				</code>
+				
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Definir estilos para links</h2>
+				<p>Para definir un estilo para tu link sólo debes crear las cuatro reglas con sus respectivos pseudo-selectores de la siguiente manera:</p>
+				<code>
+					<span>a:link{</span>
+						<span class="indentx1">font-size:20px;</span>
+						<span class="indentx1">color:#00ccff;</span>
+						<span class="indentx1">text-decoration:none;</span>
+					<span>}</span>
+					<span>a:visited {</span>
+						<span class="indentx1">color:#0000ff;</span>
+					<span>}</span>
+					<span>a:hover {</span>
+						<span class="indentx1">color: #4444ff;</span>
+						<span class="indentx1">text-decoration: underline;</span>
+					<span>}</span>
+					<span>a:active {</span>
+						<span class="indentx1">color: #ff0000;</span>
+					<span>}</span>
+				</code>
+				<p>Utiliza el link a continuación para revisar los estados del link</p>
+				<p><a href="http://www.academiamac.cl" id="link-especial" target="_blank">Academia Mac</a></p>
+				<h3>Importante</h3>
+				<ul>
+					<li>El orden en que utilices los pseudo-selectores es importante, si ubicáramos "hover" u "active" antes de "link" o visited", aquellos ignorarían las reglas de éstos y el estilo del link no funcionaría.</li>
+					<li>Notarás que el atributo <em>font-weight</em> permanece en los 4 estados a pesar de estar solo definido en el primer pseudo-selector. Esto es por la herencia, los pseudo-selectores de link heredan estilos de los anteriores. Excepto en aquellas propiedades que se cambian explícitamente.</li>
+				</ul>
+			</div><!--.article-->
+			
+			<div class="article">
+				<h2>Más información</h2>
+				<p>Existe una serie pseudo-selectores o pseudo-classes que podemos utilizar, para revisar la lista completa, por favor visita este sitio:</p>
+				<p><a href="http://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">W3Schools - Pseudo classes</a></p>
+			</div><!--.article-->
+			
+		</div><!--#content-->
+	</div><!-- #wrapper -->
+
+</body>
+</html>
