@@ -20,6 +20,20 @@
 		}
 
 
+		/*Especificidad
+			Etiqueta:1
+			Class:10;
+			ID:100;
+
+			Da lo mismo donde ponga el ID, porque siempre va a mandar porque representa una mayor jerarquia 
+		*/
+		.amarillo { color: yellow; }
+		#morado { color: purple; }
+		p{color: #ff0000;}
+		p{color: green;} 
+		p#morado{ color: pink; } /*Se pueden poner reglas compuestas, que van sumando en especificidad.. en este caso, esta constituida de una etiqueta + id, por ende, sumaría 101 y seria predominante */
+	
+
 	 </style>
 
 
