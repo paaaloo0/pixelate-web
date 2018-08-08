@@ -3,6 +3,49 @@ body {
 	padding: 0;
 	background-color: #f5f6f7;
 	font-family: 'Roboto', sans-serif;
+	line-height: 1.5;
+	font-size: 12px;
+	color: #575757;
+}
+h1,h2{	
+	margin: 0;
+	padding: 0;
+	font-weight: 400; 
+}
+p{
+	margin: 0;
+}
+a{
+	color: red;
+	margin: 40px;
+	padding: 20px;
+	background-color:#cccccc;
+
+}
+a:hover{/*Cuando el cursor pase por encima*/
+	color: blue;
+	background-color: green;
+
+	} 
+a:active{/*Cuando apreto el boton sin soltar*/
+	color: pink;
+	background-color: yellow;
+
+	} 
 
 
-	}
+/*Reglas Personalizadas*/
+h1{
+	font-size: 22px;
+	color: #AF447C;
+	text-transform: uppercase; /*Subir a mayúsculas*/
+}
+
+h2{
+	font-size: 10px;
+	color: #575757;
+}
+
+
+
+
