@@ -54,9 +54,31 @@ h2{
 		border: 1px solid #e5e5e5;
 		} 
 	.figura img {
-			width: 255px 
+			width: 255px;
 			
-		}
+	}
+
+	.figura	{
+			position: relative;
+			overflow: hidden; /*Esta etiqueta es similar a la máscara de recorte, 
+			tiene que ver con los limites*/
+	}
+
+	.cinta {
+		font-size: 10px;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: #ffffff;
+		background-color: #0b77d8;
+		padding: 2px 30px;
+		position: absolute;
+		top: 9px;
+		left: -23px;
+		transform: rotate(-35deg);
+
+		
+
+	}
 
 
 
