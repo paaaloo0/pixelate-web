@@ -50,7 +50,7 @@ h2{
 	}
 
 	.cuerpo{
-		padding: 30px;
+		padding: 15px;
 		border: 1px solid #e5e5e5;
 		} 
 	.figura img {
@@ -59,9 +59,16 @@ h2{
 	}
 
 	.figura	{
+			width: 255px;
+			height: 193px;
 			position: relative;
 			overflow: hidden; /*Esta etiqueta es similar a la máscara de recorte, 
 			tiene que ver con los limites*/
+			background-image: url("../_images/bicicleta.jpeg");
+			background-repeat: no-repeat;
+			background-size: cover; /* Hace que la imagen ocupe todo el espacio que tiene para posicionarse*/
+    		background-position: 50%; /*Se mueve la imagen que hay dentro del contenedor, se centra*/
+
 	}
 
 	.cinta {
@@ -75,9 +82,16 @@ h2{
 		top: 9px;
 		left: -23px;
 		transform: rotate(-35deg);
+		}
 
-		
-
+	.cuerpo h1{
+		border-bottom: 10px;
+		border-bottom: 1px solid #e5e5e5;
+		padding-bottom: 5px;
+    	margin-bottom: 10px;
+	}
+	.cuerpo p {
+		margin-bottom: 10px;
 	}
 
 
@@ -90,9 +104,10 @@ h2{
 	background-color: #AF447C;
 	font-size: 10px;
 	color: #ffffff;
-	padding: 5px 4px;
+	padding: 6px 14px;
 	border-radius: 6px;
 	transition: background-color 250ms linear;
+
 }
 .boton:hover{
 	color: #f5f5f5;
