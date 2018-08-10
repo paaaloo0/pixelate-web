@@ -1,0 +1,83 @@
+*, *:before, *:after { box-sizing: border-box; }
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.5;
+	font-size: 12px;
+	color: #575757;
+}
+h1,h2{	
+	margin: 0;
+	padding: 0;
+	font-weight: 400; 
+}
+p{
+	margin: 0;
+}
+a{
+	color: #AF447C;
+	text-decoration: none; /*Eliminar subrayado*/
+}
+a:hover,
+a:active,
+a:focus{
+	color: #194478;
+	text-decoration: underline; /*Agregar Subrayado*/
+}
+
+/*Reglas Personalizadas*/
+h1{
+	font-size: 22px;
+	color: #AF447C;
+	text-transform: uppercase; /*Subir a mayúsculas*/
+}
+
+h2{
+	font-size: 10px;
+	color: #575757;
+
+}
+/*ESTRUCTURA*/ 
+
+.tarjeta{
+	width: 255px;
+	margin: 50px auto 0; /*Arriba (izq y der) Abajo */
+	background-color: #f5f5f5;
+	
+	}
+
+	.cuerpo{
+		padding: 30px;
+		border: 1px solid #e5e5e5;
+		} 
+	.figura img {
+			width: 255px 
+			
+		}
+
+
+
+/*ESTILOS MULTIUSO*/
+
+.boton{
+	display: inline-block;
+    text-align: center;
+	background-color: #AF447C;
+	font-size: 10px;
+	color: #ffffff;
+	padding: 5px 4px;
+	border-radius: 6px;
+	transition: background-color 250ms linear;
+}
+.boton:hover{
+	color: #f5f5f5;
+	background-color: #73425c;
+	text-decoration: none;
+	
+}
+
+
+
