@@ -42,12 +42,24 @@ h2{
 }
 /*ESTRUCTURA*/ 
 
+.tarjetero {
+
+	width: 1080px;
+	margin: 50px auto;
+}
+		
 .tarjeta{
+	float: left;
 	width: 255px;
-	margin: 50px auto 0; /*Arriba (izq y der) Abajo */
 	background-color: #f5f5f5;
-	
-	}
+	margin-right: 20px;
+	margin-bottom: 20px;
+
+}
+
+.tarjeta:nth-child(4n){ /*Selecciona un elemento del grupo tarjeta, multiplo de 4*/
+	margin-right: 0;
+}
 
 	.cuerpo{
 		padding: 15px;
