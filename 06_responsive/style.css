@@ -161,6 +161,15 @@ h2{
 	.tarjetero{
 		width: 80%;
 	}
+		.tarjeta:{
+			width: 23,5%;
+		}
+		.tarjeta:nth-child(3n){
+			margin-right: 2%;
+		}
+		.tarjeta:nth-child(4n){
+			margin-right: 0;
+		}
 }
 
 
