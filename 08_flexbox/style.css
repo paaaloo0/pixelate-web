@@ -1,0 +1,36 @@
+
+*{ box-sizing: border-box; } /*Esta regla esta 
+diciendo para determinar el tamaño de un elemento, solamente considera el contenido*/
+body{
+
+	margin: 0;
+	padding: 0;
+
+}
+
+.container{
+	width: 90%;
+	background-color: #f5f5f5;
+	margin: 50px auto;
+	/*La mayoria de las propiedades de Flexbox, se aplican al CONTENEDOR SOLAMENTE*/
+	display: flex;
+	flex-direction: row; /*Dirección en la que se disponen los elementos row/column */
+	flex-wrap: wrap; /*El valor por defecto es nowrap, o sea que encaje todo como pueda 
+	dentro del contendor asignado, pero wrap quiere decir que mantenga cierto ancho y 
+	las que no alcanzan las tire hacia abajo.. y asi sucesivamente*/
+	align-items: flex-start; /*Permite alinear elementos en vertical, flex-start, flex-end, center*/
+	justify-content: space-between; /*Alinear y distribuir en el eje horizontal, flex-start, flex-end, center, space-around, space-between */
+	 /*Como illustrator*/
+
+}
+
+.caja {
+	width: 30%;
+	padding: 10px;
+	border: 1px solid pink;
+	margin-bottom: 20px;
+}
+
+.uno{ background-color: rgba(255,0,0,0.2); height: 100px }
+.dos{ background-color: rgba(0,255,0,0.2); height: 180px }
+.tres{ background-color: rgba(0,0,255,0.2); height: 210px }
